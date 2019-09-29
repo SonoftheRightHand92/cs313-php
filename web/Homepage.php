@@ -43,21 +43,6 @@
     </script>
 </head>
 <body class="container">
-
-    <?php
-        $info = getdate();
-        $date = $info['mday'];
-        $month = $info['mon'];
-        $year = $info['year'];
-        $hour = $info['hours'];
-        $min = $info['minutes'];
-        $sec = $info['seconds'];
-
-        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec;
-
-        echo $currentDate;
-        
-    ?>
     <div>
         <h1 id="stuff">Assignment Page</h1><br>
         <a href="assignmentIndex.html">Assignments</a>
@@ -85,5 +70,20 @@
             Your browser does not support HTML5 video.
         </video>
     </div>
+
+    <?php
+        $info = getdate();
+        $date = $info['mday'];
+        $month = $info['mon'];
+        $year = $info['year'];
+        $hour = $info['hours'];
+        $min = $info['minutes'];
+        $sec = $info['seconds'];
+
+        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec;
+
+        echo "<div>""<h1>"Current Time"</h1>""</div>"$currentDate;
+        
+    ?>
 </body>
 </html>
