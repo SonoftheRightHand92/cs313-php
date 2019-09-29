@@ -45,7 +45,18 @@
 <body class="container">
 
     <?php
-        echo getdate();
+        $info = getdate();
+        $date = $info['mday'];
+        $month = $info['mon'];
+        $year = $info['year'];
+        $hour = $info['hours'];
+        $min = $info['minutes'];
+        $sec = $info['seconds'];
+
+        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. $min . $sec;
+
+        echo $currentDate;
+        
     ?>
     <div>
         <h1 id="stuff">Assignment Page</h1><br>
