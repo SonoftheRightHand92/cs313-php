@@ -53,7 +53,16 @@
         $min = $info['minutes'];
         $sec = $info['seconds'];
 
-        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. $min . $sec;
+        if ((int)$hour > 12) {
+            $hour = (int)$hour - 12;
+            $sec += "pm"
+        }
+
+        else {
+            $sec += "am"
+        }
+
+        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec;
 
         echo $currentDate;
         
