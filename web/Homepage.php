@@ -82,7 +82,7 @@
 
         $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec;
 
-        echo "<div>""<h1>"Current Time"</h1>""</div>"$currentDate;
+        echo "<div><h1>Current Time</h1><p>Current Time: " . $currentDate . "</div>"
         
     ?>
 </body>
