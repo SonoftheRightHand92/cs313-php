@@ -52,18 +52,8 @@
         $hour = $info['hours'];
         $min = $info['minutes'];
         $sec = $info['seconds'];
-        $partOfDay = "";
 
-        if ((int)$hour > 12) {
-            $hour = (int)$hour - 12;
-            $partOfDay = "pm";
-        }
-
-        else {
-            $partOfDay = "am"
-        }
-
-        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec . $partOfDay;
+        $currentDate = "" . $month . "/" . $date . "/" . $year . " " . $hour. ":" . $min . "." . $sec;
 
         echo $currentDate;
         
