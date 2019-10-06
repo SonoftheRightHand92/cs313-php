@@ -19,15 +19,28 @@
 <body>
     <h1 id="header">Shopping Cart</h1>
     <?php
-        for ($i = 10; $i < 35; $i++) {
-            if (!is_null($_POST[$i])) {
-                echo $i . "<br>";
-            }
-        }
-        
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
+
+        for ($i = 0; $i < 5; $i++) {
+            if (is_null($_POST[($i + 10)])) {
+                $meat[$i] = "";
+            }
+        }
+
+        for ($i = 0; $i < 5; $i++) {
+            if (is_null($_POST[($i + 20)])) {
+                $veggies[$i] = "";
+            }
+        }
+
+        for ($i = 0; $i < 5; $i++) {
+            if (is_null($_POST[($i + 30)])) {
+                $dairy[$i] = "";
+            }
+        }
+
         $text = "<form method='post' action='ShoppingCart.php'>";
 
         for ($i = 0; $i < sizeof($meat); $i++) {
