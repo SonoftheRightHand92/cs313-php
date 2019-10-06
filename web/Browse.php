@@ -91,15 +91,15 @@
         $text = "";
 
         for ($i = 0; $i < sizeof($var); $i++) {
-                $text = $text . $var[$i] . '\n';
+                $text = $text . $var[$i] . "\n";
         }
 
         for ($i = 0; $i < sizeof($var2); $i++) {
-            $text = $text . $var2[$i] . '\n';
+            $text = $text . $var2[$i] . "\r\n";
         }
 
         for ($i = 0; $i < sizeof($var3); $i++) {
-            $text = $text . $var3[$i] . '\n';
+            $text = $text . $var3[$i] . '\r\n';
         }
 
         echo $text;
