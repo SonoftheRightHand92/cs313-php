@@ -34,8 +34,6 @@
                     document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + cow[i].value + "\n";
                 }
             }
-
-            grabStuff();
         }
     </script>
 </head>
@@ -63,7 +61,7 @@
             <input type="checkbox" name="dairy[]" value="Butter">Butter<br>
             <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
-            <button type="button" onclick="grabItems()">Add Items to Cart</button>
+            <button type="button" onclick="grabItems(); grabStuff();">Add Items to Cart</button>
             <input type="submit">
         </fieldset>
     </form>
