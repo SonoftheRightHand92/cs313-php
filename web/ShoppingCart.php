@@ -25,7 +25,6 @@
         $dairy = $_SESSION["d"];
 
         if ($_SESSION["t"]) {
-            echo "<h1>HELLO!!!!!!</h1><br>";
             for ($i = 0; $i < 5; $i++) {
                 if ($_POST[($i + 10)] == "" || is_null($_POST[($i + 10)])) {
                    $meat[$i] = NULL;
@@ -49,7 +48,7 @@
             $_SESSION["d"] = $dairy;
         }
 
-        $text = "<form method='post' action='ShoppingCart.php'>";
+        $text = "<form method='post' action='ShoppingCart.php'><fieldset><legend>Items</legend>";
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
@@ -75,7 +74,7 @@
             }
         }
         
-        $text = $text . "<input type='submit' value='Remove Items'></form>";
+        $text = $text . "<input type='submit' value='Remove Items'></fieldset></form>";
 
         echo $text;
 
