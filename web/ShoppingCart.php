@@ -27,19 +27,19 @@
         if ($_SESSION["t"]) {
             echo "<h1>HELLO!!!!!!</h1><br>";
             for ($i = 0; $i < 5; $i++) {
-                if (is_null($_POST[($i + 10)])) {
+                if ($_POST[($i + 10)] == "" || is_null($_POST[($i + 10)])) {
                    $meat[$i] = NULL;
                 }
             }
 
             for ($i = 0; $i < 4; $i++) {
-                if (is_null($_POST[($i + 20)])) {
+                if ($_POST[($i + 20)] == "" || is_null($_POST[($i = 20)])) {
                     $veggies[$i] = NULL;
                 }
             }
 
             for ($i = 0; $i < 5; $i++) {
-                if (is_null($_POST[($i + 30)])) {
+                if ($_POST[($i + 30)] == "" || is_null($_POST[($i = 30)])) {
                     $dairy[$i] = NULL;
                 }
             }
