@@ -9,33 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 03</title>
     <link rel="stylesheet" type="text/css" href="shopping.css">
-    <script>
-        function grabItems() {
-            document.getElementById("area").innerHTML = "";
-
-            var meats = document.getElementsByName("meat[]");
-            var vegetables = document.getElementsByName("veggies[]");
-            var cow = document.getElementsByName("dairy[]");
-
-            for (i = 0; i < meats.length; i++) {
-                if (meats[i].checked == true) {
-                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + meats[i].value + "\n";
-                }
-            }
-
-            for (i = 0; i < vegetables.length; i++) {
-                if (vegetables[i].checked == true) {
-                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + vegetables[i].value + "\n";
-                }
-            }
-
-            for (i = 0; i < cow.length; i++) {
-                if (cow[i].checked == true) {
-                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + cow[i].value + "\n";
-                }
-            }
-        }
-    </script>
 </head>
 <body>
     <form action="Browse.php" method="post">
@@ -61,7 +34,6 @@
             <input type="checkbox" name="dairy[]" value="Butter">Butter<br>
             <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
-            <!-- <button type="button" onclick="grabItems()">Add Items to Cart</button> -->
             <input type="submit" value="Add Items to Cart">
         </fieldset>
     </form><br>

@@ -11,6 +11,17 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
-    
+    <h1>Shopping Cart</h1>
+    <?php
+        $meat = $_SESSION["m"]; 
+        $veggies = $_SESSION["v"];
+        $dairy = $_SESSION["d"];
+
+        for ($i = 0; $i < sizeof($meat); $i++) {
+            if ($meat[$i] != "") {
+                echo $meat[$i] . " <button type='button'>Remove</button>"
+            }
+        }
+    ?>
 </body>
 </html>
