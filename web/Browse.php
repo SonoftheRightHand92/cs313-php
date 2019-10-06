@@ -14,7 +14,7 @@
             var items = document.getElementsByName("meat[]");
 
             for (i = 0; i < items.length; i++) {
-                document.getElementById("para").innerHTML += item[i];
+                document.getElementById("para").innerHTML = document.getElementbyId("para").innerHTML + item[i];
             }
         }
     </script>
