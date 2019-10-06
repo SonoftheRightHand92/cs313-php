@@ -72,7 +72,7 @@
 
     <?php
     function grabStuff() {
-        alert("yo");
+        echo "<div>". Did this work? . "</div";
     }
     ?>
 </body>
