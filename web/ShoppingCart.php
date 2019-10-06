@@ -23,21 +23,22 @@
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
 
+        //if (!is_null($_SESSION["m"] || !is_null($_SESSION["v"]) || !is_null($_SESSION["d"]) {
         for ($i = 0; $i < 5; $i++) {
             if (is_null($_POST[($i + 10)])) {
-                $meat[$i] = "";
+                $meat[$i] = NULL;
             }
         }
 
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             if (is_null($_POST[($i + 20)])) {
-                $veggies[$i] = "";
+                $veggies[$i] = NULL;
             }
         }
 
         for ($i = 0; $i < 5; $i++) {
             if (is_null($_POST[($i + 30)])) {
-                $dairy[$i] = "";
+                $dairy[$i] = NULL;
             }
         }
 
@@ -70,6 +71,7 @@
         $text = $text . "<input type='submit' value='Remove Items'></form>";
 
         echo $text;
+    //}
     ?>
 </body>
 </html>
