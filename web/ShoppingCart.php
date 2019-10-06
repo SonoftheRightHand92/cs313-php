@@ -40,7 +40,7 @@
 
         for ($i = 0; $i < sizeof($dairy); $i++) {
             if (!is_null($dairy[$i])) {
-                $dairyID = "300" . $i;S
+                $dairyID = "300" . $i;
                 $text = $text . "<input type='text' id='" . ($dairyID) . "' value='". $dairy[$i] ."' readonly>" . $dairy[$i] . " <button type='button' onclick='myFunction($dairyID)'>Remove</button><br><br>";
             }
         }
