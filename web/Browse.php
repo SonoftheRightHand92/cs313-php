@@ -65,19 +65,36 @@
             <input type="submit" onclick="grabItems()" value="Add Items to Cart">
         </fieldset>
     </form>
-
-    <br>Items in Cart:<br>
-    <textarea id="area" rows="14" cols="50" readonly></textarea><br>
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
 
     <?php
+        $var = NULL;
+        $var2 = NULL;
+        $var3 = NULL;
+
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
 
             for ($i = 0; $i < sizeof($var); $i++) {
-                echo $var[$i];
+                echo $var[$i] . '\n';
             }
         }
+
+        if (isset($_POST['veggies'])) {
+            $var = $_POST['meat'];
+        }
+
+        if (isset($_POST['dairy'])) {
+            $var = $_POST['meat'];
+        }
+
+        if ($var != NULL || $var2 != NULL || $var3 != NULL) {
+            echo "<br>Items in Cart:<br> 
+            <textarea id='area' rows='14' cols='50' readonly>" .
+            
+            . "</textarea><br>"
+        }
+
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
         $_SESSION["d"] = $_POST['dairy'];
