@@ -25,7 +25,7 @@
         $dairy = $_SESSION["d"];
 
         if ($_SESSION["t"]) {
-            echo "<h1>HELLO!!!!!!</h1><br>"
+            echo "<h1>HELLO!!!!!!</h1><br>";
             for ($i = 0; $i < 5; $i++) {
                 if (is_null($_POST[($i + 10)])) {
                    $meat[$i] = NULL;
