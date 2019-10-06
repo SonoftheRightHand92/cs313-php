@@ -17,11 +17,11 @@
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
 
-        for ($i = 0; $i < sizeof($meat); $i++) {
-            if ($meat[$i] != "") {
-                echo $meat[$i] . " <button type='button'>Remove</button>"
-            }
-        }
+        // for ($i = 0; $i < sizeof($meat); $i++) {
+        //     if ($meat[$i] != "") {
+        //         echo $meat[$i] . " <button type='button'>Remove</button>"
+        //     }
+        // }
     ?>
 </body>
 </html>
