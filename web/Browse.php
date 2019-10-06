@@ -102,7 +102,7 @@
             $text = $text . $var3[$i] . "\n";
         }
 
-        echo "Items in Cart:<br>"
+        echo "Items in Cart:<br>";
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
             echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
