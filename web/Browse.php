@@ -75,17 +75,17 @@
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
 
-            for ($i = 0; $i < sizeof($var); $i++) {
-                echo $var[$i] . '\n';
-            }
+            // for ($i = 0; $i < sizeof($var); $i++) {
+            //     echo $var[$i] . '\n';
+            // }
         }
 
         if (isset($_POST['veggies'])) {
-            $var = $_POST['meat'];
+            $var2 = $_POST['veggies'];
         }
 
         if (isset($_POST['dairy'])) {
-            $var = $_POST['meat'];
+            $var3 = $_POST['dairy'];
         }
 
         if ($var != NULL || $var2 != NULL || $var3 != NULL) {
