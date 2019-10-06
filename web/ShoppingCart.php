@@ -19,6 +19,12 @@
 <body>
     <h1 id="header">Shopping Cart</h1>
     <?php
+        for ($i = 10; $i < 35; $i++) {
+            if (!is_null($_POST[$i])) {
+                echo $i . "<br>";
+            }
+        }
+        
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
