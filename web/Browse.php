@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 03</title>
     <link rel="stylesheet" type="text/css" href="shopping.css">
+    <script>
+        function grabItems() {
+            var items = document.getElementsByName("meat[]");
+
+            for (i = 0; i < items.length; i++) {
+                document.getElementById("para").innerHTML += item[i];
+            }
+        }
+    </script>
 </head>
 <body>
     <form action="Checkout.php">
@@ -29,10 +41,15 @@
             <input type="checkbox" name="Dairy[]" value="Yogurt">Yogurt<br>
             <input type="checkbox" name="Dairy[]" value="Ice Cream">Ice Cream<br>
             <input type="checkbox" name="Dairy[]" value="Butter">Butter<br>
-            <input type="checkbox" name="Dairy[]" value="Cheddar Cheese">Cheddar Cheese<br>
+            <input type="checkbox" name="Dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
+            <button type="button" value="Add items to Cart" onclick="grabItems()">
             <input type="submit">
         </fieldset>
     </form>
+
+    <p id="para">
+
+    </p>
 </body>
 </html>
