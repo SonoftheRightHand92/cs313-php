@@ -19,6 +19,8 @@
 <body>
     <h1 id="header">Shopping Cart</h1>
     <?php
+
+        echo alert("Stuff");
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
