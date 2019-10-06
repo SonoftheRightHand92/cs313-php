@@ -13,18 +13,25 @@
 <body>
     <h1>Checkout</h1>
 
-    Street Address:<br>
-    <input type="text" name="street"><br>
+    <form action="confirmation.php" method="post">
+        <fieldset>
+            <legend>Address</legend>
 
-    City:<br>
-    <input type="text" name="city"><br>
+            Street Address:<br>
+            <input type="text" name="street"><br>
 
-    State:<br>
-    <input type="text" name="state"><br>
+            City:<br>
+            <input type="text" name="city"><br>
 
-    Zip Code:<br>
-    <input tpye="text" name="zip"><br>
-    
+            State:<br>
+            <input type="text" name="state"><br>
+
+            Zip Code:<br>
+            <input type="text" name="zip"><br>
+            <input type="submit" value="purchase">
+        </fieldset>
+    </form>
+
     <?php
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
