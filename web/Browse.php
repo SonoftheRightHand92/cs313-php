@@ -74,7 +74,9 @@
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
 
-            echo $var[0];
+            for ($i = 0; $i < sizeof($var); $i++) {
+                echo $var[$i];
+            }
         }
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
