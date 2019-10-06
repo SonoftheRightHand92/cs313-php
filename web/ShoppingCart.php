@@ -12,7 +12,7 @@
 
     <script>
         function myFunction(customID) {
-            document.getElementById(customID).innerHTML = "";
+            document.getElementById("header").innerHTML = customID;
         }
     </script>
 </head>
