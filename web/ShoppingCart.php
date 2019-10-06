@@ -27,21 +27,21 @@
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
                 $meatID = 100 + $i;
-                $text = $text . "<input type='text' id='" . ($meatID) . "'>" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='" . ($meatID) . "' value='". $meat[$i] ."' readonly>" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($veggies); $i++) {
             if (!is_null($veggies[$i])) {
                 $veggiesID = 200 + $i;
-                $text = $text . "<input type='text' id='" . ($veggiesID) . "'>" . $veggies[$i] . " <button type='button' onclick='myFunction($veggiesID)'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='" . ($veggiesID) . "' value='". $veggies[$i] ."' readonly>" . $veggies[$i] . " <button type='button' onclick='myFunction($veggiesID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($dairy); $i++) {
             if (!is_null($dairy[$i])) {
                 $dairyID = 300 + $i;
-                $text = $text . "<input type='text' id='" . ($dairyID) . "'>" . $dairy[$i] . " <button type='button' onclick='myFunction($dairyID)'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='" . ($dairyID) . "' value='". $dairy[$i] ."' readonly>" . $dairy[$i] . " <button type='button' onclick='myFunction($dairyID)'>Remove</button><br><br>";
             }
         }
         
