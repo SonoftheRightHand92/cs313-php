@@ -19,7 +19,7 @@
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
-                echo $meat[$i] . " <button type='button' onclick='myFunction'>Remove</button><br><br>";
+                echo $meat[$i] . " <button type='button' onclick='myFunction()'>Remove</button><br><br>";
             }
         }
 
