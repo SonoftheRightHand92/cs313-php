@@ -71,19 +71,22 @@
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button>
 
     <?php
+        if (isset($_POST['meat'])) {
+            print_r($_POST['meat']);
+        }
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
         $_SESSION["d"] = $_POST['dairy'];
 
         $var = $_POST['meat'];
 
-        function loop() {
-            for ($i = 0; $i < sizeof($var); $i++) {
-                echo $var[$i];
-            }
-        }
+        // function loop() {
+        //     for ($i = 0; $i < sizeof($var); $i++) {
+        //         echo $var[$i];
+        //     }
+        // }
 
-        echo loop();
+        // echo loop();
     ?>
 
 </body>
