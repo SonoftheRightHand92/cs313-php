@@ -43,7 +43,7 @@
             <input type="checkbox" name="Dairy[]" value="Butter">Butter<br>
             <input type="checkbox" name="Dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
-            <button type="button" value="Add items to Cart" onclick="grabItems()">
+            <button type="button" onclick="grabItems()">Add Items to Cart</button>
             <input type="submit">
         </fieldset>
     </form>
