@@ -13,7 +13,7 @@
 <body>
     <h1>Checkout</h1>
 
-    <button type="button" onclick="window.location.href='Checkout.php'">Back to Items</button><br><br>
+    <button type="button" onclick="window.location.href='ShoppingCart.php'">Back to Items</button><br><br>
 
     <form action="confirmation.php" method="post">
         <fieldset>
