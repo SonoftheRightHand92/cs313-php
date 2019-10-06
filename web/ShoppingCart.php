@@ -12,12 +12,12 @@
 
     <script>
         function myFunction() {
-            echo "<h1>WHAT AM I DOING!!!!!</h1>";
+            document.getElementById("header").innerHTML = "<h1>WHAT AM I DOING!!!!!</h1>";
         }
     </script>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+    <h1 id="header">Shopping Cart</h1>
     <?php
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
