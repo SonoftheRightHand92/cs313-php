@@ -89,10 +89,7 @@
         }
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
-            echo "<br>Items in Cart:<br>";
-            // <textarea id='area' rows='14' cols='50' readonly>" .
-            
-            // . "</textarea><br>";
+            echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly></textarea><br>";
         }
 
         $_SESSION["m"] = $_POST['meat'];
