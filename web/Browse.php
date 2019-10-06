@@ -62,7 +62,7 @@
             <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
             <!-- <button type="button" onclick="grabItems()">Add Items to Cart</button> -->
-            <input type="submit" onclick="grabItems()" value="Add Items to Cart">
+            <input type="submit" value="Add Items to Cart">
         </fieldset>
     </form>
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
