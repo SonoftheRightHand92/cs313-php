@@ -34,6 +34,8 @@
                     document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + cow[i].value + "\n";
                 }
             }
+
+            grabStuff();
         }
     </script>
 </head>
@@ -69,5 +71,11 @@
     <br>Items in Cart:<br>
     <textarea id="area" rows="14" cols="50" readonly></textarea><br>
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button>
+
+    <?php
+    function grabStuff() {
+        alert("yo");
+    }
+    ?>
 </body>
 </html>
