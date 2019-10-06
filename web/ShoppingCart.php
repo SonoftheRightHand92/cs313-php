@@ -49,7 +49,7 @@
             $_SESSION["d"] = $dairy;
         }
 
-        $text = "<form method='post' action='ShoppingCart.php'><fieldset><legend>Items</legend>";
+        $text = "<form method='post' action='ShoppingCart.php'><fieldset><legend>Items In Cart</legend>";
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
