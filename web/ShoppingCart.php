@@ -36,7 +36,7 @@
         }
 
         function myFunction() {
-            echo "<h1>WHAT AM I DOING!!!!!</h1>"
+            echo "<h1>WHAT AM I DOING!!!!!</h1>";
         }
     ?>
 </body>
