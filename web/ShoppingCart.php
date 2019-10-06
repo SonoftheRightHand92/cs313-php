@@ -23,23 +23,28 @@
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
 
-        //if (!is_null($_SESSION["m"] || !is_null($_SESSION["v"]) || !is_null($_SESSION["d"]) {
-        for ($i = 0; $i < 5; $i++) {
-            if (is_null($_POST[($i + 10)])) {
-                $meat[$i] = NULL;
+        if ($_SESSION["t"]) {
+            for ($i = 0; $i < 5; $i++) {
+                if (is_null($_POST[($i + 10)])) {
+                   $meat[$i] = NULL;
+                }
             }
-        }
 
-        for ($i = 0; $i < 4; $i++) {
-            if (is_null($_POST[($i + 20)])) {
-                $veggies[$i] = NULL;
+            for ($i = 0; $i < 4; $i++) {
+                if (is_null($_POST[($i + 20)])) {
+                    $veggies[$i] = NULL;
+                }
             }
-        }
 
-        for ($i = 0; $i < 5; $i++) {
-            if (is_null($_POST[($i + 30)])) {
-                $dairy[$i] = NULL;
+            for ($i = 0; $i < 5; $i++) {
+                if (is_null($_POST[($i + 30)])) {
+                    $dairy[$i] = NULL;
+                }
             }
+
+            $_SESSION["m"] = $meat;
+            $_SESSION["v"] = $veggies;
+            $_SESSION["d"] = $dairy;
         }
 
         $text = "<form method='post' action='ShoppingCart.php'>";
@@ -71,7 +76,8 @@
         $text = $text . "<input type='submit' value='Remove Items'></form>";
 
         echo $text;
-    //}
+
+        $_SESSION["t"] = true;
     ?>
 </body>
 </html>

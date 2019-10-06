@@ -77,6 +77,7 @@
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
         $_SESSION["d"] = $_POST['dairy'];
+        $_SESSION["t"] = false;
     ?>
 
 </body>
