@@ -65,7 +65,7 @@
             <input type="submit" value="Add Items to Cart">
         </fieldset>
     </form><br>
-    <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br><br>
+    <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
 
     <?php
         $var = NULL;
@@ -74,10 +74,6 @@
 
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
-
-            // for ($i = 0; $i < sizeof($var); $i++) {
-            //     echo $var[$i] . '\n';
-            // }
         }
 
         if (isset($_POST['veggies'])) {
@@ -101,8 +97,6 @@
         for ($i = 0; $i < sizeof($var3); $i++) {
             $text = $text . $var3[$i] . "\n";
         }
-
-        echo "Items in Cart:<br>";
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
             echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
