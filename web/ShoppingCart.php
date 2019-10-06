@@ -45,7 +45,9 @@
             }
         }
         
-        $text = $text . "<input type='submit' value='Remove Items'></form>"
+        $text = $text . "<input type='submit' value='Remove Items'></form>";
+
+        echo $text;
     ?>
 </body>
 </html>
