@@ -61,7 +61,7 @@
             <input type="checkbox" name="dairy[]" value="Butter">Butter<br>
             <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
-            <button type="button" onclick="grabStuff()">Add Items to Cart</button>
+            <button type="button" onclick="grabItems()">Add Items to Cart</button>
             <input type="submit">
         </fieldset>
     </form>
@@ -71,9 +71,7 @@
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button>
 
     <?php
-    function grabStuff() {
         echo "<div>". "Did this work?" . "</div";
-    }
     ?>
 
 </body>
