@@ -82,6 +82,8 @@
                 echo $var[$i];
             }
         }
+
+        echo loop();
     ?>
 
 </body>
