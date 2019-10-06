@@ -88,12 +88,12 @@
             $var3 = $_POST['dairy'];
         }
 
-        if ($var != NULL || $var2 != NULL || $var3 != NULL) {
-            echo "<br>Items in Cart:<br> 
-            <textarea id='area' rows='14' cols='50' readonly>" .
+        // if ($var != NULL || $var2 != NULL || $var3 != NULL) {
+        //     echo "<br>Items in Cart:<br> 
+        //     <textarea id='area' rows='14' cols='50' readonly>" .
             
-            . "</textarea><br>"
-        }
+        //     . "</textarea><br>"
+        // }
 
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
