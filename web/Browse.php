@@ -101,11 +101,11 @@
         for ($i = 0; $i < sizeof($var3); $i++) {
             $text = $text . $var3[$i] . '\n';
         }
-        
+
         echo $text;
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
-            echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly></textarea><br>";
+            echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
         }
 
         $_SESSION["m"] = $_POST['meat'];
