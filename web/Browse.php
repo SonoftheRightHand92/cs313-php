@@ -68,9 +68,9 @@
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
 
     <?php
-        $var = NULL;
-        $var2 = NULL;
-        $var3 = NULL;
+        $var;
+        $var2;
+        $var3;
 
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
