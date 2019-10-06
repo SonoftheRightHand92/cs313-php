@@ -11,10 +11,28 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
     <script>
         function grabItems() {
-            var items = document.getElementsByName("meat[]");
+            document.getElementById("area").innerHTML = "";
 
-            for (i = 0; i < items.length; i++) {
-                document.getElementById("para").innerHTML = document.getElementbyId("para").innerHTML + item[i];
+            var meats = document.getElementsByName("meat[]");
+            var vegetables = document.getElementsByName("veggies[]");
+            var cow = document.getElementsByName("dairy[]");
+
+            for (i = 0; i < meats.length; i++) {
+                if (meats[i].checked == true) {
+                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + meats[i].value + "\n";
+                }
+            }
+
+            for (i = 0; i < vegetables.length; i++) {
+                if (vegetables[i].checked == true) {
+                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + vegetables[i].value + "\n";
+                }
+            }
+
+            for (i = 0; i < cow.length; i++) {
+                if (cow[i].checked == true) {
+                    document.getElementById("area").innerHTML = document.getElementById("area").innerHTML + cow[i].value + "\n";
+                }
             }
         }
     </script>
@@ -37,19 +55,20 @@
             <input type="checkbox" name="veggies[]" value="Mushrooms">Mushrooms<br><br>
 
             <h3>Dairy</h3>
-            <input type="checkbox" name="Dairy[]" value="Milk">Milk<br>
-            <input type="checkbox" name="Dairy[]" value="Yogurt">Yogurt<br>
-            <input type="checkbox" name="Dairy[]" value="Ice Cream">Ice Cream<br>
-            <input type="checkbox" name="Dairy[]" value="Butter">Butter<br>
-            <input type="checkbox" name="Dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
+            <input type="checkbox" name="dairy[]" value="Milk">Milk<br>
+            <input type="checkbox" name="dairy[]" value="Yogurt">Yogurt<br>
+            <input type="checkbox" name="dairy[]" value="Ice Cream">Ice Cream<br>
+            <input type="checkbox" name="dairy[]" value="Butter">Butter<br>
+            <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
             <button type="button" onclick="grabItems()">Add Items to Cart</button>
             <input type="submit">
         </fieldset>
     </form>
 
-    <p id="para">
+    <br>Items in Cart:<br>
+    <textarea id="area" rows="14" cols="50" readonly>
 
-    </p>
+    </textarea>
 </body>
 </html>
