@@ -72,9 +72,9 @@
 
     <?php
     function grabStuff() {
-        echo "<div>". Did this work? . "</div";
+        echo "<div>". "Did this work?" . "</div";
     }
     ?>
-    
+
 </body>
 </html>
