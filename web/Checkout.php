@@ -35,17 +35,7 @@
     </form>
 
     <?php
-        $meat = $_SESSION["m"]; 
-        $veggies = $_SESSION["v"];
-        $dairy = $_SESSION["d"];
         $_SESSION["t"] = false;
-        echo "Hello!!!";
-
-
-
-
-
-
     ?>
 </body>
 </html>
