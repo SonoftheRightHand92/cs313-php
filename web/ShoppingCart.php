@@ -13,7 +13,7 @@
     <script>
         function myFunction(customID) {
             document.getElementById("header").innerHTML = customID;
-            document.getElementById("apple").innerHTML = "Stuff"
+            document.getElementById("apple").value = "Stuff"
         }
     </script>
 </head>
