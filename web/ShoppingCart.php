@@ -13,7 +13,7 @@
     <script>
         function myFunction(customID) {
             document.getElementById("header").innerHTML = customID;
-            document.getElementById(1000).innerHTML = "Stuff"
+            document.getElementById("A00").innerHTML = "Stuff"
         }
     </script>
 </head>
@@ -27,21 +27,21 @@
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
-                $meatID = "100" . $i;
-                $text = $text . "<input type='text' id='" . ($meatID) . "' value='". $meat[$i] ."' >" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
+                $meatID = "A0" . $i;
+                $text = $text . "<input type='text' id='" . ($meatID) . "' value='". $meat[$i] ."' readonly>" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($veggies); $i++) {
             if (!is_null($veggies[$i])) {
-                $veggiesID = "200" . $i;
+                $veggiesID = "B0" . $i;
                 $text = $text . "<input type='text' id='" . ($veggiesID) . "' value='". $veggies[$i] ."' readonly>" . $veggies[$i] . " <button type='button' onclick='myFunction($veggiesID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($dairy); $i++) {
             if (!is_null($dairy[$i])) {
-                $dairyID = "300" . $i;
+                $dairyID = "C0" . $i;
                 $text = $text . "<input type='text' id='" . ($dairyID) . "' value='". $dairy[$i] ."' readonly>" . $dairy[$i] . " <button type='button' onclick='myFunction($dairyID)'>Remove</button><br><br>";
             }
         }
