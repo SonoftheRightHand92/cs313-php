@@ -28,7 +28,7 @@
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
                 $meatID = "100" . $i;
-                $text = $text . "<input type='text' id='" . ($meatID) . "' value='". $meat[$i] ."' readonly>" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='" . ($meatID) . "' value='". $meat[$i] ."' >" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
             }
         }
 
