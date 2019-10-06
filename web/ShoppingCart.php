@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
 
     <script>
-        function myFunction() {
-            document.getElementById("header").innerHTML = "<h1>WHAT AM I DOING!!!!!</h1>";
+        function myFunction(customID) {
+            document.getElementById(customID).innerHTML = "";
         }
     </script>
 </head>
@@ -22,24 +22,30 @@
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
+        $text = "<form method='post' action='ShoppingCart.php'>";
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
-                echo $meat[$i] . " <button type='button' onclick='myFunction()'>Remove</button><br><br>";
+                $meatID = 100 + $i;
+                $text = $text . "<input type='text' id='" . ($meatID) . "'>" . $meat[$i] . " <button type='button' onclick='myFunction($meatID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($veggies); $i++) {
             if (!is_null($veggies[$i])) {
-                echo $veggies[$i] . " <button type='button'>Remove</button><br><br>";
+                $veggiesID = 200 + $i;
+                $text = $text . "<input type='text' id='" . ($veggiesID) . "'>" . $veggies[$i] . " <button type='button' onclick='myFunction($veggiesID)'>Remove</button><br><br>";
             }
         }
 
         for ($i = 0; $i < sizeof($dairy); $i++) {
             if (!is_null($dairy[$i])) {
-                echo $dairy[$i] . " <button type='button'>Remove</button><br><br>";
+                $dairyID = 300 + $i;
+                $text = $text . "<input type='text' id='" . ($dairyID) . "'>" . $dairy[$i] . " <button type='button' onclick='myFunction($dairyID)'>Remove</button><br><br>";
             }
         }
+        
+        $text = $text . "<input type='submit' value='Remove Items'></form>"
     ?>
 </body>
 </html>
