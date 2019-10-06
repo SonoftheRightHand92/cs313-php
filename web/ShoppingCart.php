@@ -18,6 +18,8 @@
 </head>
 <body>
     <h1 id="header">Shopping Cart</h1>
+    <button type="button" onclick="window.location.href='Browse.php'">Back to Items</button>
+    <button type="button" onclick="window.location.href='Checkout.php'">Checkout</button><br>
     <?php
 
         $meat = $_SESSION["m"]; 
