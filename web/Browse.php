@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-    <form action="Checkout.php">
+    <form action="Browse.php" method="post">
         <fieldset>
             <legend>Items</legend>
             <h3>Meats</h3>
@@ -61,8 +61,8 @@
             <input type="checkbox" name="dairy[]" value="Butter">Butter<br>
             <input type="checkbox" name="dairy[]" value="Cheddar Cheese">Cheddar Cheese<br><br>
 
-            <button type="button" onclick="grabItems()">Add Items to Cart</button>
-            <input type="submit">
+            <!-- <button type="button" onclick="grabItems()">Add Items to Cart</button> -->
+            <input type="submit" onclick="grabItems()" value="Add Items to Cart">
         </fieldset>
     </form>
 
@@ -71,7 +71,17 @@
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button>
 
     <?php
-        echo "<div>". "Did this work?" . "</div";
+        $_SESSION["m"] = $_POST['meat'];
+        $_SESSION["v"] = $_POST['veggies'];
+        $_SESSION["d"] = $_POST['dairy'];
+
+        $var = $_POST['meat'];
+
+        function loop() {
+            for ($i = 0; $i < sizeof($var); $i++) {
+                echo $var[$i];
+            }
+        }
     ?>
 
 </body>
