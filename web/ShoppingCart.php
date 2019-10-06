@@ -19,7 +19,7 @@
 <body>
     <h1 id="header">Shopping Cart</h1>
     <button type="button" onclick="window.location.href='Browse.php'">Back to Items</button>
-    <button type="button" onclick="window.location.href='Checkout.php'">Checkout</button><br>
+    <button type="button" onclick="window.location.href='Checkout.php'">Checkout</button><br><br>
     <?php
 
         $meat = $_SESSION["m"]; 
@@ -34,13 +34,13 @@
             }
 
             for ($i = 0; $i < 4; $i++) {
-                if ($_POST[($i + 20)] == "" || is_null($_POST[($i = 20)])) {
+                if ($_POST[($i + 20)] == "" || is_null($_POST[($i + 20)])) {
                     $veggies[$i] = NULL;
                 }
             }
 
             for ($i = 0; $i < 5; $i++) {
-                if ($_POST[($i + 30)] == "" || is_null($_POST[($i = 30)])) {
+                if ($_POST[($i + 30)] == "" || is_null($_POST[($i + 30)])) {
                     $dairy[$i] = NULL;
                 }
             }
