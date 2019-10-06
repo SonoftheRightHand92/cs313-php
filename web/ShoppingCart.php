@@ -12,7 +12,8 @@
 
     <script>
         function myFunction(customID) {
-            document.getElementById(String(customID)).value = ""
+            document.getElementById("header").value = customID;
+            document.getElementById(String(customID)).value = "";
         }
     </script>
 </head>
@@ -27,7 +28,7 @@
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
                 $meatID = "A0" . $i;
-                $text = $text . "<input type='text' id='" . $meatID . "' value='". $meat[$i] ."' readonly>" . " <button type='button' onclick='myFunction(" . $meatID . ")'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='" . $meatID . "' value='". $meat[$i] ."' readonly>" . " <button type='button' onclick='myFunction(A0" . $i . ")'>Remove</button><br><br>";
             }
         }
 
