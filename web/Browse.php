@@ -68,9 +68,9 @@
     <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
 
     <?php
-        $var;
-        $var2;
-        $var3;
+        $var = NULL;
+        $var2 = NULL;
+        $var3 = NULL;
 
         if (isset($_POST['meat'])) {
             $var = $_POST['meat'];
@@ -88,12 +88,12 @@
             $var3 = $_POST['dairy'];
         }
 
-        // if ($var != NULL || $var2 != NULL || $var3 != NULL) {
-        //     echo "<br>Items in Cart:<br> 
-        //     <textarea id='area' rows='14' cols='50' readonly>" .
+        if (is_null($var) || is_null($var2) || is_null($var3)) {
+            echo "<br>Items in Cart:<br> 
+            <textarea id='area' rows='14' cols='50' readonly>" .
             
-        //     . "</textarea><br>"
-        // }
+            . "</textarea><br>"
+        }
 
         $_SESSION["m"] = $_POST['meat'];
         $_SESSION["v"] = $_POST['veggies'];
