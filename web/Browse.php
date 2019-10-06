@@ -65,7 +65,7 @@
             <input type="submit" value="Add Items to Cart">
         </fieldset>
     </form><br>
-    <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br>
+    <button type="button" onclick="window.location.href='ShoppingCart.php'">View Cart</button><br><br>
 
     <?php
         $var = NULL;
@@ -102,7 +102,7 @@
             $text = $text . $var3[$i] . "\n";
         }
 
-        echo $text;
+        echo "Items in Cart:<br>"
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
             echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
