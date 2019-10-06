@@ -19,7 +19,19 @@
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
-                echo $meat[$i] . " <button type='button'>Remove</button><br>";
+                echo $meat[$i] . " <button type='button'>Remove</button><br><br>";
+            }
+        }
+
+        for ($i = 0; $i < sizeof($veggies); $i++) {
+            if (!is_null($veggies[$i])) {
+                echo $veggies[$i] . " <button type='button'>Remove</button><br><br>";
+            }
+        }
+
+        for ($i = 0; $i < sizeof($dairy); $i++) {
+            if (!is_null($dairy[$i])) {
+                echo $dairy[$i] . " <button type='button'>Remove</button><br><br>";
             }
         }
     ?>
