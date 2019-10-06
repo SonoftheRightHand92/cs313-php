@@ -20,13 +20,12 @@
     <h1 id="header">Shopping Cart</h1>
     <?php
 
-        echo alert("Stuff");
         $meat = $_SESSION["m"]; 
         $veggies = $_SESSION["v"];
         $dairy = $_SESSION["d"];
 
         if ($_SESSION["t"]) {
-            echo alert("Hello");
+            echo "<h1>HELLO!!!!!!</h1><br>"
             for ($i = 0; $i < 5; $i++) {
                 if (is_null($_POST[($i + 10)])) {
                    $meat[$i] = NULL;
