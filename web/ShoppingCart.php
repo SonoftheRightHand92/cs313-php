@@ -9,6 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping Cart</title>
     <link rel="stylesheet" type="text/css" href="shopping.css">
+
+    <script>
+        function myFunction() {
+            echo "<h1>WHAT AM I DOING!!!!!</h1>";
+        }
+    </script>
 </head>
 <body>
     <h1>Shopping Cart</h1>
@@ -33,10 +39,6 @@
             if (!is_null($dairy[$i])) {
                 echo $dairy[$i] . " <button type='button'>Remove</button><br><br>";
             }
-        }
-
-        function myFunction() {
-            echo "<h1>WHAT AM I DOING!!!!!</h1>";
         }
     ?>
 </body>
