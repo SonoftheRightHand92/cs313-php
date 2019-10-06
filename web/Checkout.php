@@ -11,6 +11,30 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
+    <h1>Checkout</h1>
+
+    Street Address:<br>
+    <input type="text" name="street"><br>
+
+    City:<br>
+    <input type="text" name="city"><br>
+
+    State:<br>
+    <input type="text" name="state"><br>
+
+    Zip Code:<br>
+    <input tpye="text" name="zip"><br>
     
+    <?php
+        $meat = $_SESSION["m"]; 
+        $veggies = $_SESSION["v"];
+        $dairy = $_SESSION["d"];
+
+
+
+
+
+
+    ?>
 </body>
 </html>
