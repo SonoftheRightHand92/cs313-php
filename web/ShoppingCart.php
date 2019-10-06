@@ -13,7 +13,7 @@
     <script>
         function myFunction(customID) {
             document.getElementById("header").innerHTML = customID;
-            document.getElementById(customID).innerHTML = "Stuff"
+            document.getElementById("apple").innerHTML = "Stuff"
         }
     </script>
 </head>
@@ -27,7 +27,7 @@
 
         for ($i = 0; $i < sizeof($meat); $i++) {
             if (!is_null($meat[$i])) {
-                $text = $text . "<input type='text' id='A00' value='". $meat[$i] ."' readonly>" . " <button type='button' onclick='myFunction(\"A00\")'>Remove</button><br><br>";
+                $text = $text . "<input type='text' id='apple' value='". $meat[$i] ."' readonly>" . " <button type='button' onclick='myFunction(\"apple\")'>Remove</button><br><br>";
             }
         }
 
