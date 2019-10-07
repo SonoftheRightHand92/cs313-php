@@ -20,16 +20,16 @@
             <legend>Address</legend>
 
             Street Address:<br>
-            <input type="text" name="street"><br><br>
+            <input type="text" name="street" required><br><br>
 
             City:<br>
-            <input type="text" name="city"><br><br>
+            <input type="text" name="city" required><br><br>
 
             State:<br>
-            <input type="text" name="state"><br><br>
+            <input type="text" name="state" required><br><br>
 
             Zip Code:<br>
-            <input type="text" name="zip"><br><br>
+            <input type="text" name="zip" required><br><br>
             <input type="submit" value="purchase">
         </fieldset>
     </form>
