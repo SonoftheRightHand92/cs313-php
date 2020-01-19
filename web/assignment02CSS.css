@@ -2,3 +2,8 @@ body {
     background-color: black;
     color: cyan;
 }
+
+img {
+    width: 50%;
+    height: auto;
+}
