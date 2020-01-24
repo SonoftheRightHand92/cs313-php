@@ -102,9 +102,6 @@
             echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
         }
 
-        //$_SESSION["m"] = $_POST['meat'];
-        //$_SESSION["v"] = $_POST['veggies'];
-        //$_SESSION["d"] = $_POST['dairy'];
         $_SESSION["t"] = false; 
 
 
