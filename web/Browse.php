@@ -78,15 +78,21 @@
         $text = "";
 
         for ($i = 0; $i < sizeof($var); $i++) {
+            if (!is_null($var[$i])) {
                 $text = $text . $var[$i] . "\n";
+            }    
         }
 
         for ($i = 0; $i < sizeof($var2); $i++) {
-            $text = $text . $var2[$i] . "\n";
+            if (!is_null($var2[$i])) {
+                $text = $text . $var2[$i] . "\n";
+            } 
         }
 
         for ($i = 0; $i < sizeof($var3); $i++) {
-            $text = $text . $var3[$i] . "\n";
+            if (!is_null($var3[$i])) {
+                $text = $text . $var3[$i] . "\n";
+            } 
         }
 
         if (!is_null($var) || !is_null($var2) || !is_null($var3)) {
