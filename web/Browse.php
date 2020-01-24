@@ -59,7 +59,6 @@
         }
 
         else {
-            echo "YO DUDE IS THIS OK";
             if (isset($_SESSION["m"])) {
                 $var = $_SESSION["m"];
             }
@@ -96,6 +95,7 @@
         $_SESSION["d"] = $_POST['dairy'];
         
         if (!isset($_SESSION["t"])) {
+            alert("Session is not set");
             $_SESSION["t"] = false; 
         }
 
