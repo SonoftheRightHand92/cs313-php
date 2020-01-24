@@ -67,15 +67,15 @@
 
         else {
             if (isset($_SESSION["m"])) {
-                $var = $_SESSION["m"];
+                $var = $_POST['meat'];
             }
 
             if (isset($_SESSION["v"])) {
-                $var2 = $_SESSION["v"];
+                $var2 = $_POST['veggies'];
             }
 
             if (isset($_SESSION["d"])) {
-                $var3 = $_SESSION["d"];
+                $var3 = $_POST['dairy'];
             }
         }
 
