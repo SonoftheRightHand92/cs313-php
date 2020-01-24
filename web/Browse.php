@@ -50,7 +50,7 @@
         print_r($_SESSION["d"]);
         echo "<br>";
 
-        if (!isset($_SESSION["m"]) || !isset($_SESSION["v"]) || !isset($_SESSION["d"])) {
+        if (!isset($_SESSION["m"]) && !isset($_SESSION["v"]) && !isset($_SESSION["d"])) {
             echo "not set<br>";
             if (isset($_POST['meat'])) {
                 $var = $_POST['meat'];
