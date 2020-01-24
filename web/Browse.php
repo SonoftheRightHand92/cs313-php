@@ -50,14 +50,32 @@
              $_SESSION["m"] = $_POST['meat'];
         }
 
+        else {
+            if (isset($_SESSION["m"])) {
+                $var = $_SESSION["m"];
+            }
+        }
+
         if (isset($_POST['veggies'])) {
             $var2 = $_POST['veggies'];
             $_SESSION["v"] = $_POST['veggies'];
         }
 
+        else {
+            if (isset($_SESSION["v"])) {
+                $var2 = $_SESSION["v"];
+            }
+        }
+
         if (isset($_POST['dairy'])) {
             $var3 = $_POST['dairy'];
             $_SESSION["d"] = $_POST['dairy'];
+        }
+
+        else {
+            if (isset($_SESSION["d"])) {
+                $var3 = $_SESSION["d"];
+            }
         }
 
         $text = "";
