@@ -59,7 +59,7 @@
         }
 
         else {
-            echo "YO DUDE IS THIS OK"
+            echo "YO DUDE IS THIS OK";
             if (isset($_SESSION['m'])) {
                 $var = $_SESSION['m'];
             }
