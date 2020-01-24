@@ -45,7 +45,6 @@
         $var3 = NULL;
 
         if (!isset($_SESSION["m"]) && !isset($_SESSION["v"]) && !isset($_SESSION["d"])) {
-            echo "not set<br>";
             if (isset($_POST['meat'])) {
                 $var = $_POST['meat'];
                 $_SESSION["m"] = $_POST['meat'];
