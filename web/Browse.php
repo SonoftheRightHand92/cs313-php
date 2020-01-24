@@ -44,6 +44,10 @@
         $var2 = NULL;
         $var3 = NULL;
 
+        if (is_null($var) && is_null($var2) && is_null($var3)) {
+            echo "THREE STARTING VARIABLES ARE NULL!<br>"
+        }
+
         if (!isset($_SESSION["m"]) && !isset($_SESSION["v"]) && !isset($_SESSION["d"])) {
             if (isset($_POST['meat'])) {
                 $var = $_POST['meat'];
