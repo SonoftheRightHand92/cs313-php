@@ -44,39 +44,20 @@
         $var2 = NULL;
         $var3 = NULL;
 
-        if (is_null($var) && is_null($var2) && is_null($var3)) {
-            echo "THREE STARTING VARIABLES ARE NULL!<br>";
+     
+        if (isset($_POST['meat'])) {
+             $var = $_POST['meat'];
+             $_SESSION["m"] = $_POST['meat'];
         }
 
-        if (!isset($_SESSION["m"]) && !isset($_SESSION["v"]) && !isset($_SESSION["d"])) {
-            if (isset($_POST['meat'])) {
-                $var = $_POST['meat'];
-                $_SESSION["m"] = $_POST['meat'];
-            }
-
-            if (isset($_POST['veggies'])) {
-                $var2 = $_POST['veggies'];
-                $_SESSION["v"] = $_POST['veggies'];
-            }
-
-            if (isset($_POST['dairy'])) {
-                $var3 = $_POST['dairy'];
-                $_SESSION["d"] = $_POST['dairy'];
-            }
+        if (isset($_POST['veggies'])) {
+            $var2 = $_POST['veggies'];
+            $_SESSION["v"] = $_POST['veggies'];
         }
 
-        else {
-            if (isset($_SESSION["m"])) {
-                $var = $_POST['meat'];
-            }
-
-            if (isset($_SESSION["v"])) {
-                $var2 = $_POST['veggies'];
-            }
-
-            if (isset($_SESSION["d"])) {
-                $var3 = $_POST['dairy'];
-            }
+        if (isset($_POST['dairy'])) {
+            $var3 = $_POST['dairy'];
+            $_SESSION["d"] = $_POST['dairy'];
         }
 
         $text = "";
