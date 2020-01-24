@@ -95,7 +95,7 @@
         $_SESSION["d"] = $_POST['dairy'];
         
         if (!isset($_SESSION["t"])) {
-            alert("Session is not set");
+            echo "message";
             $_SESSION["t"] = false; 
         }
 
