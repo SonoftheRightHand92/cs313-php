@@ -60,16 +60,16 @@
 
         else {
             echo "YO DUDE IS THIS OK";
-            if (isset($_SESSION['m'])) {
-                $var = $_SESSION['m'];
+            if (isset($_SESSION["m"])) {
+                $var = $_SESSION["m"];
             }
 
-            if (isset($_SESSION['v'])) {
-                $var2 = $_SESSION['v'];
+            if (isset($_SESSION["v"])) {
+                $var2 = $_SESSION["v"];
             }
 
-            if (isset($_SESSION['d'])) {
-                $var3 = $_SESSION['d'];
+            if (isset($_SESSION["d"])) {
+                $var3 = $_SESSION["d"];
             }
         }
 

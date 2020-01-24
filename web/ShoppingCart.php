@@ -28,19 +28,25 @@
         if ($_SESSION["t"]) {
             for ($i = 0; $i < 5; $i++) {
                 if ($_POST[($i + 10)] == "" || is_null($_POST[($i + 10)])) {
-                   $meat[$i] = NULL;
+                   //$meat[$i] = NULL;
+                   unset($meat[$i]);
+                   $meat = array_values($meat);
                 }
             }
 
             for ($i = 0; $i < 4; $i++) {
                 if ($_POST[($i + 20)] == "" || is_null($_POST[($i + 20)])) {
-                    $veggies[$i] = NULL;
+                    //$veggies[$i] = NULL;
+                    unset($veggies[$i]);
+                    $veggies = array_values($veggies);
                 }
             }
 
             for ($i = 0; $i < 5; $i++) {
                 if ($_POST[($i + 30)] == "" || is_null($_POST[($i + 30)])) {
-                    $dairy[$i] = NULL;
+                    //$dairy[$i] = NULL;
+                    unset($dairy[$i]);
+                    $dairy = array_values($dairy);
                 }
             }
 
