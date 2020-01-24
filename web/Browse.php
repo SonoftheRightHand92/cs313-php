@@ -43,12 +43,6 @@
         $var = NULL;
         $var2 = NULL;
         $var3 = NULL;
-        print_r($_SESSION["m"]);
-        echo "<br>";
-        print_r($_SESSION["v"]);
-        echo "<br>";
-        print_r($_SESSION["d"]);
-        echo "<br>";
 
         if (!isset($_SESSION["m"]) && !isset($_SESSION["v"]) && !isset($_SESSION["d"])) {
             echo "not set<br>";
@@ -69,7 +63,6 @@
         }
 
         else {
-            echo "YO DUDE IS THIS OK<br>";
             if (isset($_SESSION["m"])) {
                 $var = $_SESSION["m"];
             }
