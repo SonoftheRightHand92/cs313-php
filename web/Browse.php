@@ -80,7 +80,5 @@
         $_SESSION["t"] = false;
     ?>
 
-    <h2>STUFF</h2>
-
 </body>
 </html>
