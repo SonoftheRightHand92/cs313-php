@@ -47,18 +47,22 @@
         if (!isset($_SESSION["m"]) || !isset($_SESSION["v"]) || !isset($_SESSION["d"])) {
             if (isset($_POST['meat'])) {
                 $var = $_POST['meat'];
+                $_SESSION["m"] = $_POST['meat'];
             }
 
             if (isset($_POST['veggies'])) {
                 $var2 = $_POST['veggies'];
+                $_SESSION["v"] = $_POST['veggies'];
             }
 
             if (isset($_POST['dairy'])) {
                 $var3 = $_POST['dairy'];
+                $_SESSION["d"] = $_POST['dairy'];
             }
         }
 
         else {
+            echo "YO DUDE IS THIS OK";
             if (isset($_SESSION["m"])) {
                 $var = $_SESSION["m"];
             }
@@ -90,14 +94,11 @@
             echo "<br>Items in Cart:<br><textarea rows='14' cols='50' readonly>" . $text . "</textarea><br>";
         }
 
-        $_SESSION["m"] = $_POST['meat'];
-        $_SESSION["v"] = $_POST['veggies'];
-        $_SESSION["d"] = $_POST['dairy'];
-        
-        if (!isset($_SESSION["t"])) {
-            echo "message";
-            $_SESSION["t"] = false; 
-        }
+        //$_SESSION["m"] = $_POST['meat'];
+        //$_SESSION["v"] = $_POST['veggies'];
+        //$_SESSION["d"] = $_POST['dairy'];
+        $_SESSION["t"] = false; 
+
 
     ?>
 
