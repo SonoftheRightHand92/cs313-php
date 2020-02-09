@@ -7,6 +7,11 @@
     <title>Profile</title>
 
     <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        
         h1 {
             text-align: center;
         }
