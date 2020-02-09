@@ -21,12 +21,11 @@
     <h1>Profiles</h1>
     <?php
         require "dbConnect.php";
+        $form = "<div><form action ='profile.php' method='post'><select name='people'";
         $db1 = get_db();
         $comments1 = $db1->prepare("SELECT * FROM comments");
 
         $comments1->execute();
-
-        $form = "<div><form action ='profile.php' method='post'><select name='people'";
         while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name1 = $cRow1["custom_name"];
