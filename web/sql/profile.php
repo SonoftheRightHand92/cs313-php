@@ -30,6 +30,7 @@
         if (isset($_POST["people"]))
         {
             $person = $_POST["people"];
+            echo "<h1>$person</h1>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = $person");
             echo "<textarea rows='3' cols='80' readonly>$description</textarea>";
         }
