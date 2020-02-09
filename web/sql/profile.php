@@ -10,6 +10,25 @@
     <title>Profile</title>
 </head>
 <body>
+
+    <?php
+        require "dbConnect.php";
+        $db = get_db();
+        $comments = $db->prepare("SELECT * FROM comments");
+
+        $comments->execute();
+
+        $form = "<form><select name='people'";
+        while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
+        {
+            $custom_name = $cRow["custom_name"];
+            $user_comment = $cRow["user_comment"];
+            $user_description = $cRow["user_description"];
+            $form = $form . "<option value='$custom_name'>$custom_name</option>";
+        }
+        $form = $form . "</select><button type='submit'>Submit</form>";
+        $_SESSION["custom_name"] = $custom_name;
+    ?>
     
 </body>
 </html>

@@ -32,13 +32,12 @@
         {
             $custom_name = $cRow["custom_name"];
             $user_comment = $cRow["user_comment"];
-            //   $user_description = $cRow["user_description"];
             echo "<div>$custom_name:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
         }
 
         $_SESSION["custom_name"] = $custom_name;
 ?>
-    <a id="ref1" href="profile.php">View Profiles</a>
+    <h2><a id="ref1" href="profile.php">View Profiles</a></h2>
 
 </body>
 </html>
