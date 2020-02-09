@@ -27,7 +27,7 @@
             $custom_name = $cRow["custom_name"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
-        $form = $form . "</select><button type='See Description'>Submit</button></form>/div><br>";
+        $form = $form . "</select><button type='See Description'>Submit</button></form></div><br>";
 
         echo $form;
 
