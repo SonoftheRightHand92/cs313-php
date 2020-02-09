@@ -40,13 +40,11 @@
         if (isset($_POST["people"]))
         {
             $person = $_POST["people"];
-            echo "<div><h1>$person</h1></div>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = '$person'");
             $description->execute();
 
             while ($dRow = $description->fetch(PDO::FETCH_ASSOC))
             {
-                echo "STuff";
                 $desc = $dRow["user_description"];
             }
             echo "<textarea rows='3' cols='80' readonly>$desc</textarea>";
