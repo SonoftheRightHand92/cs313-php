@@ -26,15 +26,7 @@
 
         $comments1->execute();
 
-        if (isset($_POST["people"]))
-        {
-            $form = "<div><form action ='profile.php' method='post'><select name='people' default='$_POST[\"people\"]'";
-        }
-
-        else 
-        {
-            $form = "<div><form action ='profile.php' method='post'><select name='people'";
-        }
+        $form = "<div><form action ='profile.php' method='post'><select name='people'";
         while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name1 = $cRow1["custom_name"];
