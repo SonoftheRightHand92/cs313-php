@@ -21,16 +21,15 @@
     <h1>Profiles</h1>
     <?php
         require "dbConnect.php";
-        $db = get_db();
-        $comments = $db->prepare("SELECT * FROM comments");
+        $db1 = get_db();
+        $comments1 = $db1->prepare("SELECT * FROM comments");
 
-        $comments->execute();
+        $comments1->execute();
 
         $form = "<div><form action ='profile.php' method='post'><select name='people'";
-        while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
+        while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
         {
-            echo "$custom_name ";
-            $custom_name = $cRow["custom_name"];
+            $custom_name1 = $cRow1["custom_name"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
         $form = $form . "</select><button type='See Description'>Submit</button></form></div><br>";
