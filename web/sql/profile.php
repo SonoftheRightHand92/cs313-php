@@ -11,7 +11,7 @@
             background-color: black;
             color: white;
         }
-        
+
         h1 {
             text-align: center;
         }
@@ -19,6 +19,14 @@
         #ref1 {
             display: block;
             text-align: center;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: red;
         }
     </style>
 </head>
