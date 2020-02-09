@@ -21,7 +21,7 @@
     <h1>Profiles</h1>
     <?php
         require "dbConnect.php";
-        $form = "<div><form action ='profile.php' method='post'><select name='people'";
+        // $form = "<div><form action ='profile.php' method='post'><select name='people'";
         $db1 = get_db();
         $comments1 = $db1->prepare("SELECT * FROM comments");
 
@@ -29,11 +29,12 @@
         while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name1 = $cRow1["custom_name"];
-            $form = $form . "<option value='$custom_name1'>$custom_name1</option>";
+            echo "$custom_name1 ";
+            // $form = $form . "<option value='$custom_name1'>$custom_name1</option>";
         }
-        $form = $form . "</select><button type='See Description'>Submit</button></form></div><br>";
+        // $form = $form . "</select><button type='See Description'>Submit</button></form></div><br>";
 
-        echo $form;
+        // echo $form;
 
         if (isset($_POST["people"]))
         {
