@@ -1,10 +1,13 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Comments</title>
 </head>
 <body>
 <?php
@@ -17,12 +20,11 @@
    {
       $custom_name = $cRow["custom_name"];
       $user_comment = $cRow["user_comment"];
-      $user_description = $cRow["user_description"];
-      echo "<p>$custom_name:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea><br>About $custom_name: $user_description</p>";
+    //   $user_description = $cRow["user_description"];
+      echo "<div><a href='profile.php'$custom_name</a>:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
    }
+
+   $_SESSION["custom_name"] = $custom_name;
 ?>
 </body>
 </html>
-
-
-<!-- <textarea rows='14' cols='50' readonly> -->
