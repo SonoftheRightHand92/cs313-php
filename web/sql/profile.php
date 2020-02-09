@@ -42,7 +42,6 @@
             $person = $_POST["people"];
             echo "<div><h1>$person</h1></div>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = 'Joker'");
-            echo $description;
             echo "AFTER DESC";
             $description->execute();
 
