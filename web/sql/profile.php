@@ -40,7 +40,7 @@
         {
             $person = $_POST["people"];
             echo "About $person:<br>";
-            $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = '$person'");
+            $description = $db1->prepare("SELECT user_description FROM comments WHERE custom_name = '$person'");
             $description->execute();
 
             while ($dRow = $description->fetch(PDO::FETCH_ASSOC))
