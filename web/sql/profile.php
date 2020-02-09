@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +15,7 @@
 
         $comments->execute();
 
-        $form = "<form><select name='people'";
+        $form = "<form action ='profile.php' method='post'><select name='people'";
         while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name = $cRow["custom_name"];
@@ -26,10 +23,16 @@
             $user_description = $cRow["user_description"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
-        $form = $form . "</select><button type='submit'>Submit</form>";
-        $_SESSION["custom_name"] = $custom_name;
+        $form = $form . "</select><button type='See Description'>Submit</form>";
 
         echo $form;
+
+        if (isset($_POST["people"]))
+        {
+            $person = $_POST["people"];
+            $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = $person");
+            echo "<textarea rows='3' cols='80' readonly>$description</textarea>";
+        }
     ?>
     
 </body>
