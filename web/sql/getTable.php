@@ -1,19 +1,13 @@
 <?php
    require "dbConnect.php";
    $db = get_db();
-   $family_members = $db->prepare("SELECT * FROM w5_family_members");
-   $family_members->execute();
-   while ($fRow = $family_members->fetch(PDO::FETCH_ASSOC))
+   $comments = $db->prepare("SELECT * FROM comments");
+   $comments->execute();
+   while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
    {
-      $first_name = $fRow["first_name"];
-      $last_name = $fRow["last_name"];
-      $relationship_id = $fRow["relationship_id"];
-      $relationships = $db->prepare("SELECT description FROM w5_relationships WHERE id = $relationship_id");
-      $relationships->execute();
-      while ($rRow = $relationships->fetch(PDO::FETCH_ASSOC))
-      {
-         $relationship = $rRow["description"];
-      }
-      echo "<p>$first_name $last_name is my $relationship ($relationship_id)</p>";
+      $custom_name = $fRow["custom_name"];
+      $user_comment = $fRow["user_comment"];
+      $user_description = $fRow["user_description"];
+      echo "<p>$custom_name: $user_comment<br>About $custom_name: $user_description</p>";
    }
 ?>
