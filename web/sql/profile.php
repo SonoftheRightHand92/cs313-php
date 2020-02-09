@@ -30,7 +30,7 @@
         while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name1 = $cRow1["custom_name"];
-            $form = $form . "<option value='$custom_name'>$custom_name</option>";
+            $form = $form . "<option value='$custom_name1'>$custom_name1</option>";
         }
         $form = $form . "</select><button type='See Description'>Submit</button></form></div><br>";
 
