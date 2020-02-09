@@ -13,25 +13,31 @@
         h1 {
             text-align: center;
         }
+
+        #ref {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>Comments</h1>
-<?php
-   require "dbConnect.php";
-   $db = get_db();
-   $comments = $db->prepare("SELECT * FROM comments");
+    <?php
+        require "dbConnect.php";
+        $db = get_db();
+        $comments = $db->prepare("SELECT * FROM comments");
 
-   $comments->execute();
-   while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
-   {
-      $custom_name = $cRow["custom_name"];
-      $user_comment = $cRow["user_comment"];
-    //   $user_description = $cRow["user_description"];
-      echo "<div><a href='profile.php'>$custom_name</a>:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
-   }
+        $comments->execute();
+        while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
+        {
+            $custom_name = $cRow["custom_name"];
+            $user_comment = $cRow["user_comment"];
+            //   $user_description = $cRow["user_description"];
+            echo "<div>$custom_name:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
+        }
 
-   $_SESSION["custom_name"] = $custom_name;
+        $_SESSION["custom_name"] = $custom_name;
 ?>
+    <a id="ref" href="profile.php">View Profiles</a>
+
 </body>
 </html>
