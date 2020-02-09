@@ -41,8 +41,7 @@
         {
             $person = $_POST["people"];
             echo "<div><h1>$person</h1></div>";
-            $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = $person");
-            echo "AFTER DESC";
+            $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = '$person'");
             $description->execute();
 
             while ($dRow = $description->fetch(PDO::FETCH_ASSOC))
