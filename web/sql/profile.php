@@ -21,15 +21,13 @@
 
         $comments->execute();
 
-        $form = "<form action ='profile.php' method='post'><select name='people'";
+        $form = "<div><form action ='profile.php' method='post'><select name='people'";
         while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name = $cRow["custom_name"];
-            $user_comment = $cRow["user_comment"];
-            $user_description = $cRow["user_description"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
-        $form = $form . "</select><button type='See Description'>Submit</form>";
+        $form = $form . "</select><button type='See Description'>Submit</form>/div><br>";
 
         echo $form;
 
@@ -38,7 +36,13 @@
             $person = $_POST["people"];
             echo "<div><h1>$person</h1></div>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = $person");
-            echo "<textarea rows='3' cols='80' readonly>$description</textarea>";
+            $description->execute();
+
+            while ($dRow = $description->fetch(PDO::FETCH_ASSOC))
+            {
+                $desc = $dRow["user_description"];
+            }
+            echo "<textarea rows='3' cols='80' readonly>$desc</textarea>";
         }
     ?>
     
