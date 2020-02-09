@@ -2,6 +2,12 @@
    require "dbConnect.php";
    $db = get_db();
    $comments = $db->prepare("SELECT * FROM comments");
+
+   if (is_null($comments))
+   {
+       echo "You're a stupid face";
+   }
+
    $comments->execute();
    while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
    {
