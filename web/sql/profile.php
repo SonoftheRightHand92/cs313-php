@@ -10,6 +10,11 @@
         h1 {
             text-align: center;
         }
+
+        #ref1 {
+            display: block;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -49,6 +54,9 @@
             echo "<textarea rows='3' cols='80' readonly>$desc</textarea>";
         }
     ?>
-    
+
+
+    <h2><a id="ref1" href="getTable.php">Back to Comments</a></h2>
+
 </body>
 </html>
