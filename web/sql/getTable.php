@@ -11,11 +11,11 @@
    $comments->execute();
    while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
    {
-      $custom_name = $fRow["custom_name"];
+      $custom_name = $cRow["custom_name"];
       echo "Custom Name: $custom_name<br>";
-      $user_comment = $fRow["user_comment"];
+      $user_comment = $cRow["user_comment"];
       echo "User comment: $user_comment<br>";
-      $user_description = $fRow["user_description"];
+      $user_description = $cRow["user_description"];
       echo "User description: $user_description<br>";
       echo "<p>$custom_name: $user_comment<br>About $custom_name: $user_description</p>";
    }
