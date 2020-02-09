@@ -14,7 +14,7 @@
             text-align: center;
         }
 
-        #ref {
+        #ref1 {
             text-align: center;
         }
     </style>
@@ -37,7 +37,7 @@
 
         $_SESSION["custom_name"] = $custom_name;
 ?>
-    <a id="ref" href="profile.php">View Profiles</a>
+    <a id="ref1" href="profile.php">View Profiles</a>
 
 </body>
 </html>
