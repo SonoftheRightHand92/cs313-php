@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
+    <h1>Profiles</h1>
     <?php
         require "dbConnect.php";
         $db = get_db();
@@ -30,7 +36,7 @@
         if (isset($_POST["people"]))
         {
             $person = $_POST["people"];
-            echo "<h1>$person</h1>";
+            echo "<div><h1>$person</h1></div>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = $person");
             echo "<textarea rows='3' cols='80' readonly>$description</textarea>";
         }
