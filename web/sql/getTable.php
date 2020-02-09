@@ -21,7 +21,7 @@
       $custom_name = $cRow["custom_name"];
       $user_comment = $cRow["user_comment"];
     //   $user_description = $cRow["user_description"];
-      echo "<div><a href='profile.php'$custom_name</a>:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
+      echo "<div><a href='profile.php'>$custom_name</a>:<br><textarea rows='3' cols='80' readonly>$user_comment</textarea></div>";
    }
 
    $_SESSION["custom_name"] = $custom_name;
