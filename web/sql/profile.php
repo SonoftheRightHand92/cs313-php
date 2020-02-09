@@ -28,6 +28,8 @@
         }
         $form = $form . "</select><button type='submit'>Submit</form>";
         $_SESSION["custom_name"] = $custom_name;
+
+        echo $form;
     ?>
     
 </body>
