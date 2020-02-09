@@ -84,7 +84,7 @@ INSERT INTO comments (custom_name
                      , user_description)
             VALUES   ('Heero Yuy'
                      , 'Confrim, your blast shields are secure?'
-                     , 'I seek peace and security for earth and the colonies' );
+                     , 'I seek peace and security for the earth and the colonies' );
 
 INSERT INTO comments (custom_name
                      , user_comment

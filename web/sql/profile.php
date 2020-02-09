@@ -29,7 +29,7 @@
         $form = "<div><form action ='profile.php' method='post'><select name='people'";
         while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
         {
-            echo $custom_name;
+            echo "$custom_name ";
             $custom_name = $cRow["custom_name"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
