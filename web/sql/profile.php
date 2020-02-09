@@ -40,6 +40,7 @@
         if (isset($_POST["people"]))
         {
             $person = $_POST["people"];
+            echo "About $person:<br>"
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = '$person'");
             $description->execute();
 
