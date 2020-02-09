@@ -24,6 +24,7 @@
         $form = "<div><form action ='profile.php' method='post'><select name='people'";
         while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
         {
+            echo $custom_name;
             $custom_name = $cRow["custom_name"];
             $form = $form . "<option value='$custom_name'>$custom_name</option>";
         }
@@ -37,10 +38,12 @@
             echo "<div><h1>$person</h1></div>";
             $description = $db->prepare("SELECT user_description FROM comments WHERE custom_name = 'Joker'");
             echo $description;
+            echo "AFTER DESC";
             $description->execute();
 
             while ($dRow = $description->fetch(PDO::FETCH_ASSOC))
             {
+                echo "STuff";
                 $desc = $dRow["user_description"];
             }
             echo "<textarea rows='3' cols='80' readonly>$desc</textarea>";
