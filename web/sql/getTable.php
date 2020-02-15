@@ -46,7 +46,7 @@
     <?php
         require "dbConnect.php";
         $db = get_db();
-        $comments = $db->prepare("SELECT * FROM comments");
+        $comments = $db->prepare("SELECT * FROM comments ORDER BY custom_name");
 
         $comments->execute();
         while ($cRow = $comments->fetch(PDO::FETCH_ASSOC))
