@@ -36,7 +36,7 @@
         require "dbConnect.php";
         $form = "<div><form action ='profile.php' method='post'><select name='people'>";
         $db1 = get_db();
-        $comments1 = $db1->prepare("SELECT * FROM comments");
+        $comments1 = $db1->prepare("SELECT * FROM comments ORDER BY custom_name");
 
         $comments1->execute();
         while ($cRow1 = $comments1->fetch(PDO::FETCH_ASSOC))
