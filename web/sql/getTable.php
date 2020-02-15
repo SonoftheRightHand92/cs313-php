@@ -60,7 +60,7 @@
             
             $name = $_POST['name'];
             $comment = $_POST['comment'];
-            $food = $_POST['description'];
+            $description = $_POST['description'];
 
             try
             {
