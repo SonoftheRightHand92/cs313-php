@@ -28,11 +28,6 @@
         a:visited {
             color: red;
         }
-
-        #newComment {
-            width: 500px;
-            height: 300px;
-        }
     </style>
 </head>
 <body>
@@ -46,10 +41,10 @@
             <input type="text" name="name"><br><br>
 
             Comment:<br>
-            <input type="text" id="newComment" rows="3" cols="80" name="comment"><br><br>
+            <input type="text" name="comment"><br><br>
 
             About you:<br>
-            <input type="text" rows="3" cols="80" name="description"><br><br>
+            <input type="text" name="description"><br><br>
 
             <input type="submit" value="Submit">  
         </fieldset>
