@@ -34,9 +34,9 @@
     <h1>Want to make a profile?</h1>
     <form method="post" action="getTable.php">
         Profile name:<br>
-        <input type="text" name="name"><br>
+        <input type="text" name="name"><br><br>
         Comment:<br>
-        <input type="text" rows="3" cols="80" name="comment"><br>
+        <input type="text" rows="3" cols="80" name="comment"><br><br>
         About you:<br>
         <input type="text" rows="3" cols="80" name="description"><br><br>
         <input type="submit" value="Submit">  
