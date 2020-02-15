@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Comments</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style>
     body {
             background-color: black;
@@ -54,6 +54,35 @@
     <?php
         require "dbConnect.php";
         $db = get_db();
+
+        if (isset($_POST['name']) && isset($_POST['comment']) && isset($_POST['description']))
+        {
+            
+            $name = $_POST['name'];
+            $comment = $_POST['comment'];
+            $food = $_POST['description'];
+
+            try
+            {
+	            $query = "INSERT INTO comments (custom_name, user_comment, user_description) VALUES (:name, :comment, :description)";
+	            $statement = $db->prepare($query);
+	            $statement->bindValue(':name', $name);
+	            $statement->bindValue(':comment', $comment);
+	            $statement->bindValue(':description', $description);
+	            $statement->execute();
+	
+	            $userId = $db->lastInsertId("comments_id_seq");
+            }
+            catch (Exception $ex)
+            {
+	            echo "Error with DB. Details: $ex";
+	            die();
+            }
+        }
+
+
+
+
         $comments = $db->prepare("SELECT * FROM comments ORDER BY custom_name");
 
         $comments->execute();
