@@ -31,6 +31,17 @@
     </style>
 </head>
 <body>
+
+    <form method="post" action="getTable.php">
+        Want to make a profile?<br>
+        <input type="text" name="name"><br>
+        Comment:<br>
+        <input type="text" name="comment"><br>
+        About you:<br>
+        <input type="text" name="description"><br>
+        <input type="submit" value="Submit">  
+    </form>
+
     <h1>Comments</h1>
     <?php
         require "dbConnect.php";
