@@ -36,9 +36,9 @@
         Profile name:<br>
         <input type="text" name="name"><br>
         Comment:<br>
-        <input type="textarea" rows="3" cols="80" name="comment"><br>
+        <input type="text" rows="3" cols="80" name="comment"><br>
         About you:<br>
-        <input type="textarea" rows="3" cols="80" name="description"><br><br>
+        <input type="text" rows="3" cols="80" name="description"><br><br>
         <input type="submit" value="Submit">  
     </form>
 
