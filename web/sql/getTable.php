@@ -41,11 +41,11 @@
             <input type="text" name="name"><br><br>
 
             Comment:<br>
-            <input type="text" rows="3" cols="80" name="comment"><br><br>
+            <input type="text" rows="3" cols="80" name="comment" style="width: 300px"><br><br>
 
             About you:<br>
             <input type="text" rows="3" cols="80" name="description"><br><br>
-            
+
             <input type="submit" value="Submit">  
         </fieldset>
     </form>
