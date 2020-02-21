@@ -8,7 +8,7 @@ input[type=text], select {
   }
   
   button {
-    background-color: rgb(2,157,126);
+    background-color: rgb(0,162,232);
     color: white;
     text-decoration: none;
     font-size: 24px;
@@ -24,7 +24,7 @@ form {
     padding-bottom: 15px;
     padding-right: 15px;
     background-color: black;
-    color: rgb(2,157,126);
+    color: rgb(0,162,232);
 }
   
   #form {
@@ -34,12 +34,12 @@ form {
   }
 
   legend {
-      color: rgb(2,157,126);
+      color: rgb(0,162,232);
   }
 
   input[type=submit] {
     font-size: 16px;
-    background-color: rgb(2,157,126);
+    background-color: rgb(0,162,232);
     color: white;
     padding-left: 15px;
     padding-right: 15px;

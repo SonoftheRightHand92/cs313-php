@@ -33,7 +33,7 @@
     
     .topnav {
       overflow: hidden;
-      background-color: rgb(2,157,126);
+      background-color: rgb(0,162,232);
       position: relative;
     }
     
@@ -88,7 +88,7 @@
     }
 
     footer {
-      background-color: rgb(2,157,126) ;
+      background-color: rgb(0,162,232);
       color: white;
       padding: 10px 0 0 0;
       text-align: center;
