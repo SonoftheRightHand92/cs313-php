@@ -1,0 +1,117 @@
+/*Home Page Styles for Mobile View */
+
+* { box-sizing: border-box;}
+
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+ 
+.infoheader {
+    background-color:rgb(2,157,126) ;
+    color: white;
+    font-size: .75em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+body {
+  max-width: 480px;
+  margin: auto;
+  height: 500px;
+  border-radius: 10px;
+}
+
+header h1 {
+  color: black;
+  font-size: 1.25em;
+  text-align: center;
+  padding-right: 45px;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-header img {
+  margin-top: 20px;
+  width:75px;
+  height: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(2,157,126);
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav ul li a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#menu {
+  display: none;
+}
+
+.sub-menu {
+  position: absolute;
+  background-color: rgb(5, 228, 183);
+  color: white;
+  list-style-type: none;
+  width: 90%;
+  padding-left: 0px;
+  margin-top: 0px;
+  display: none;
+  opacity: .95;
+  z-index: 1000;
+}
+
+#menu:checked ~ .sub-menu{
+  display: block;
+}
+
+.mobile-header label {
+  font-size: 2em;
+  margin-right: 25px;
+}
+
+.sub-menu > li {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+}
+
+.sub-menu > li > a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu > li:hover {
+  background-color: #ddd;
+}
+
+footer {
+  background-color: rgb(2,157,126);
+  color: white;
+  padding: 10px 0 5px 0;
+  text-align: center;
+  font-size: .75em;
+}
+} 

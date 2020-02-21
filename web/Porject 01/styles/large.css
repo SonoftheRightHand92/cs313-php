@@ -1,0 +1,82 @@
+/*Home Page Styles for Large Screen View*/
+
+@media only screen and (min-width: 992px) {
+    .infoheader {
+        display: none;
+      }
+
+      .sub-menu {
+          display: none;
+      }
+      
+      header h1 {
+        margin-top: 30px;
+        color: black;
+        font-size: 1.25em;
+        text-align: center;
+      }
+      
+      .mobile-header {
+        font-size: 26px;
+      }
+    
+      .mobile-header img {
+        margin-left: 100px;
+        margin-right: -100px;
+        float: left;
+        margin-top: -10px;
+        width:75px;
+        height: auto;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(2,157,126);
+        position: relative;
+      }
+      
+      #myLinks {
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        justify-content: center;
+      }
+
+      #myLinks > li {
+        margin-top: -17px;
+        margin-right: 25px;
+        margin-bottom: -17px;
+        text-align: center;
+        line-height: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      #myLinks > li > a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      #myLinks > li:hover {
+          background-color: #ddd;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      .mobile-header label {
+        display: none;
+      }
+
+      footer {
+        background-color: rgb(2,157,126);
+        color: white;
+        padding: 10px 0 0 0;
+        text-align: center;
+        font-size: .75em;
+      }
+}

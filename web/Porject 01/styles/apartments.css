@@ -1,0 +1,78 @@
+@media only screen and (min-width: 992px) {
+    #plans {
+        float: right;
+    }
+
+    .clearfix {
+        overflow: auto;
+    }
+
+    .column {
+        float: left;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+    }
+
+    .picture { 
+        width: 25%;
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .picture > img {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:991px) {
+    .col {
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+      
+      
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .picture > img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .picture > img {
+        width: 100%;
+        height: auto;
+    }
+}
+
