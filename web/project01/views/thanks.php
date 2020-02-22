@@ -18,22 +18,8 @@
     $_SESSION["year"] = $_POST["year"];
     $_SESSION["housing"] = $_POST["housing"];
     $housing = $_SESSION["housing"];
-    $house = $_POST["housing"];
 
-    if (isset($_POST["housing"])) {
-        echo "Housing is set!<br>";
-    }
-    else {
-        echo "Housing is NOT set!<br>";
-    }
-
-    if (isset($_POST["firstname"])) {
-        echo "firstname is set!<br>";
-    }
-    else {
-        echo "firstname is NOT set!<br>";
-    }
-    echo "<h1>STUFF$house[0]</h1>";
+    echo "<h1>$housing[0]</h1>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
