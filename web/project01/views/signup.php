@@ -14,6 +14,7 @@
 
     <script>
         function validate() {
+            alert("Validate was Called");
             var x = document.getElementByName("housing[]");
             alert("Hi");
             for (var i = 0; i < 3; i++) {
