@@ -16,11 +16,11 @@
     $_SESSION["month"] = $_POST["month"];
     $_SESSION["day"] = $_POST["day"];
     $_SESSION["year"] = $_POST["year"];
-    $_SESSION["housing[]"] = $_POST["housing[]"];
-    $housing = $_SESSION["housing[]"];
-    $house = $_POST["housing[]"];
+    $_SESSION["housing"] = $_POST["housing"];
+    $housing = $_SESSION["housing"];
+    $house = $_POST["housing"];
 
-    if (isset($_POST["housing[]"])) {
+    if (isset($_POST["housing"])) {
         echo "Housing is set!<br>";
     }
     else {
