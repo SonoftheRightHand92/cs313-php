@@ -12,21 +12,16 @@
     <link href="../styles/large.css" rel="stylesheet"> <!-- large/wide/desktop views -->
     <link href="../styles/signup.css" rel="stylesheet">
 
-    <style>
-        .hide {
-            display: none;
-        }
-
-        #parking:checked~.hide {
-            display: block;
-        }
-    </style>
     <script>
         function validate() {
-            if (document.getElementById("yup").value == "") {
-                alert("Fall was not selected");
-                return false;
+            alert("Validate Function Called");
+            var x = document.getElementByName("housing[]");
+            for (i = 0; i < x.length; i++) {
+                if (x[i].checked) {
+                    return;
+                }
             }
+            return false;
         }
     </script>
 </head>
@@ -99,7 +94,7 @@
                 <input type="text" name="year" required maxlength="4" size="4"><br><br>
 
                 Housing Contract:<br>
-                <input type="checkbox" id="yup" name="housing[]" value="Fall">Fall 2020<br>
+                <input type="checkbox" name="housing[]" value="Fall">Fall 2020<br>
                 <input type="checkbox" name="housing[]" value="Winter">Winter 2021<br>
                 <input type="checkbox" name="housing[]" value="Spring">Spring 2021<br><br>
 
