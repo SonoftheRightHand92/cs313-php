@@ -16,9 +16,9 @@
     $_SESSION["month"] = $_POST["month"];
     $_SESSION["day"] = $_POST["day"];
     $_SESSION["year"] = $_POST["year"];
-    $_SESSION["housing[]"] = $_POST["[]"];
+    $_SESSION["housing[]"] = $_POST["housing[]"];
 
-    echo $_SESSION["housing[]"][1];
+    echo $_SESSION["housing[]"][0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
