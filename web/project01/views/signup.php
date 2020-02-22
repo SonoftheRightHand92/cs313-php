@@ -66,7 +66,7 @@
 
     <main>
         <br>
-        <form action="../views/sign_in.php">
+        <form action="../views/sign_in.php" onsubmit="return validate()" method="post">
             <fieldset>
                 <legend>Personal Information:</legend>
                 First Name:<br>
