@@ -14,13 +14,14 @@
 
     <script>
         function validate() {
-            alert("Validate Function Called");
             var x = document.getElementByName("housing[]");
             for (i = 0; i < x.length; i++) {
                 if (x[i].checked) {
+                    alert("Something was Checked");
                     return;
                 }
             }
+            alert("Nothing was Checked");
             return false;
         }
     </script>
