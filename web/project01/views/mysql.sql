@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS renters;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS profiles;
 
-CREATE TABLE users
+CREATE TABLE profiles
 (id                  SERIAL          NOT NULL PRIMARY KEY
-, user               VARCHAR(100)    NOT NULL
+, custom_name        VARCHAR(100)    NOT NULL
 , code               VARCHAR(800)    NOT NULL
 , email              VARCHAR(400)    NOT NULL);
 
@@ -27,7 +27,7 @@ CREATE TABLE renters
 , b_year             INT             NOT NULL
 , housing_contract   VARCHAR(400)    NOT NULL);
 
-INSERT INTO users (user
+INSERT INTO profiles (custom_name
                   , code
                   , email)
            VALUES ('admin'
