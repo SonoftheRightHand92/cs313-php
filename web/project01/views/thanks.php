@@ -79,8 +79,7 @@
             alert("Validate Called");
             var password = document.getElementById("password").value;
             var confirm = document.getElementById("confirm").value;
-
-            alert(password);
+            
             alert(confrim);
 
             if (confrim == password) {
