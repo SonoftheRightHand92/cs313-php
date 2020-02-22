@@ -86,7 +86,7 @@
     </header>
 
     <main>
-        <h1>Thank You for signing with Harrison!</h1>
+        <h1>Thank You for signing up with Harrison Apartments!</h1>
         <h3>Please create a new User Name and Password</h3>
 
         <div class="center">
