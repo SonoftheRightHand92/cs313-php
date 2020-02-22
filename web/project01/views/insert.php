@@ -65,6 +65,7 @@ try
 	$statement2->bindValue(':userName', $userName);
 	$statement2->bindValue(':password',$password);
 	$statement2->bindValue('email', $email);
+	$statement2->execute();
 
 	$db->lastInsertId("profiles_id_seq");
 }
