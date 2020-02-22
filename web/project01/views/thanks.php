@@ -131,7 +131,7 @@
         <h3>Please create a new User Name and Password</h3>
 
         <div class="center">
-            <from method="post" onsubmit="return validate()">
+            <from method="post" onsubmit="return validate()" action="thanks.php">
                 <fieldset>
                     <legend><b>Harrison Login</b></legend>
                     User Name:<br>
