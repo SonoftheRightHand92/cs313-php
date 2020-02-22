@@ -12,19 +12,23 @@
     <link href="../styles/large.css" rel="stylesheet"> <!-- large/wide/desktop views -->
     <link href="../styles/signup.css" rel="stylesheet">
 
+    <style>
+        #error {
+            display: none;
+            color: red;
+        }
+    </style>
+
     <script>
         function validate() {
-            alert("Validate was Called");
             var x = document.getElementsByName("housing[]");
-            alert("Variable 'x' was assigned");
             for (var i = 0; i < 3; i++) {
-                alert(i);
                 if (x[i].checked) {
-                    alert("Something was Checked");
+                    document.getElementById("error").style.display = "none";
                     return;
                 }
             }
-            alert("Nothing was Checked");
+            document.getElementById("error").style.display = "block";
             return false;
         }
     </script>
@@ -67,7 +71,7 @@
 
     <main>
         <br>
-        <form action="../views/signup.php" onsubmit="return validate()" method="post">
+        <form action="../views/sign_in.php" onsubmit="return validate()" method="post">
             <fieldset>
                 <legend>Personal Information:</legend>
                 First Name:<br>
@@ -100,7 +104,11 @@
                 Housing Contract:<br>
                 <input type="checkbox" name="housing[]" value="Fall">Fall 2020<br>
                 <input type="checkbox" name="housing[]" value="Winter">Winter 2021<br>
-                <input type="checkbox" name="housing[]" value="Spring">Spring 2021<br><br>
+                <input type="checkbox" name="housing[]" value="Spring">Spring 2021
+                <p id="error">
+                    Please select which semester/s you will need a contract.
+                </p>
+                <br><br>
 
                 <input type="submit" value="Submit">
             </fieldset>
