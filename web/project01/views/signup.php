@@ -15,8 +15,8 @@
     <script>
         function validate() {
             alert("Validate was Called");
-            var x = document.getElementByName("housing[]");
-            alert("Hi");
+            var x = document.getElementsByName("housing[]");
+            alert("Variable 'x' was assigned");
             for (var i = 0; i < 3; i++) {
                 alert(i);
                 if (x[i].checked) {
