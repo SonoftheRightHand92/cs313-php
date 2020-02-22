@@ -23,8 +23,10 @@
     </style>
     <script>
         function validate() {
-            if (document.getElementById("yup").value == "")
+            if (document.getElementById("yup").value == "") {
+                alert("Fall was not selected");
                 return false;
+            }
         }
     </script>
 </head>
