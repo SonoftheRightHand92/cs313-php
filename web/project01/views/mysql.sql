@@ -1,4 +1,11 @@
 DROP TABLE IF EXISTS renters;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users
+(id                  SERIAL          NOT NULL PRIMARY KEY
+, user               VARCHAR(100)    NOT NULL
+, code               VARCHAR(800)    NOT NULL
+, email              VARCHAR(400)    NOT NULL);
 
 CREATE TABLE renters
 (id                  SERIAL          NOT NULL PRIMARY KEY
@@ -20,6 +27,13 @@ CREATE TABLE renters
 , b_year             INT             NOT NULL
 , housing_contract   VARCHAR(400)    NOT NULL);
 
+INSERT INTO users (user
+                  , code
+                  , email)
+           VALUES ('admin'
+                  , 'admin'
+                  , 'admin@admin.com');
+
 INSERT INTO renters (first_name
                     , last_name
                     , email
@@ -37,7 +51,7 @@ INSERT INTO renters (first_name
                     , b_day
                     , b_year
                     , housing_contract)
-            VALUES  ('Joe'
+             VALUES ('Joe'
                     , 'Momma'
                     , 'jmomma@hotmail.com'
                     , '200th W. Street'
