@@ -76,11 +76,8 @@
 
 <script>
         function validate() {
-            alert("Validate Called");
             var password = document.getElementById("password").value;
             var confirm = document.getElementById("confirm").value;
-
-            alert(confirm);
 
             if (confirm == password) {
                 document.getElementById("error").style.display = "none";
