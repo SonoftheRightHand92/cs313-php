@@ -21,6 +21,12 @@
             display: block;
         }
     </style>
+    <script>
+        function validate() {
+            if (document.getElementById("yup").value == "")
+                return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -60,7 +66,7 @@
 
     <main>
         <br>
-        <form action="../views/thanks.php" method="post">
+        <form action="../views/sign_in.php">
             <fieldset>
                 <legend>Personal Information:</legend>
                 First Name:<br>
@@ -91,9 +97,9 @@
                 <input type="text" name="year" required maxlength="4" size="4"><br><br>
 
                 Housing Contract:<br>
-                <input type="checkbox" name="housing1" value="Fall">Fall 2020<br>
-                <input type="checkbox" name="housing2" value="Winter">Winter 2021<br>
-                <input type="checkbox" name="housing1" value="Spring">Spring 2021<br><br>
+                <input type="checkbox" id="yup" name="housing[]" value="Fall">Fall 2020<br>
+                <input type="checkbox" name="housing[]" value="Winter">Winter 2021<br>
+                <input type="checkbox" name="housing[]" value="Spring">Spring 2021<br><br>
 
                 <input type="submit" value="Submit">
             </fieldset>
