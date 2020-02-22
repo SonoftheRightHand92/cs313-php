@@ -17,9 +17,6 @@
     $_SESSION["day"] = $_POST["day"];
     $_SESSION["year"] = $_POST["year"];
     $_SESSION["housing"] = $_POST["housing"];
-    $housing = $_SESSION["housing"];
-
-    echo "<h1>$housing[0]</h1>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +67,28 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
+        #error {
+            display: none;
+            color: red;
+        }
     </style>
+
+<script>
+        function validate() {
+            var password = document.getElementById("password").value;
+            var confirm = document.getElementById("confirm").value;
+
+            if (confrim == password) {
+                document.getElementById("error").style.display = "none";
+                return
+            }
+            else {
+                document.getElementById("error").style.display = "block";
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -113,15 +131,18 @@
         <h3>Please create a new User Name and Password</h3>
 
         <div class="center">
-            <from>
+            <from method="post" onsubmit="return validate()">
                 <fieldset>
                     <legend><b>Harrison Login</b></legend>
                     User Name:<br>
                     <input type="text" name="username" required><br>
                     Password:<br>
-                    <input type="text" name="password" required><br>
+                    <input type="text" name="password" id="password" required><br>
                     Confirm Password:<br>
-                    <input type="text" name="confirm" required><br>
+                    <input type="text" name="confirm" id="confirm" required><br>
+                    <p id="error">
+                        Passwords do not match.
+                    </p>
                     <input type="submit" value="Create Account">
                 </fieldset>
             </from>
