@@ -51,7 +51,7 @@
     <main>
         <br>
         <div class="center">
-            <from>
+            <form>
                 <fieldset>
                     <legend><b>Harrison Login</b></legend>
                     User Name:<br>
@@ -60,7 +60,7 @@
                     <input type="text" name="password" required><br><br>
                     <input type="submit" value="Login">
                 </fieldset>
-            </from>
+            </form>
         </div>
     </main>
     <br>
