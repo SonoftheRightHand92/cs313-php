@@ -18,8 +18,9 @@
     $_SESSION["year"] = $_POST["year"];
     $_SESSION["housing[]"] = $_POST["housing[]"];
     $housing = $_SESSION["housing[]"];
+    $house = $_POST["housing[]"];
 
-    echo "<h1>STUFF$housing[0]</h1>";
+    echo "<h1>STUFF$house[0]</h1>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
