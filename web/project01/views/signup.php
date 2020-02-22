@@ -15,7 +15,7 @@
     <script>
         function validate() {
             var x = document.getElementByName("housing[]");
-            for (i = 0; i < x.length; i++) {
+            for (i = 0; i < 3; i++) {
                 alert(i);
                 if (x[i].checked) {
                     alert("Something was Checked");
