@@ -26,6 +26,13 @@
     else {
         echo "Housing is NOT set!<br>";
     }
+
+    if (isset($_POST["firstname"])) {
+        echo "firstname is set!<br>";
+    }
+    else {
+        echo "firstname is NOT set!<br>";
+    }
     echo "<h1>STUFF$house[0]</h1>";
 ?>
 <!DOCTYPE html>
