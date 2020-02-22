@@ -126,7 +126,6 @@
                 <li><a href="../views/contact.html">Contact Us</a></li>
                 <li><a href="../views/sign_in.php">Sign In</a></li>
             </ul>
-
         </nav>
     </header>
 
@@ -135,7 +134,7 @@
         <h3>Please create a new User Name and Password</h3>
 
         <div class="center">
-            <from method="post" onsubmit="return validate()" action="thanks.php">
+            <form method="post" onsubmit="return validate()" action="thanks.php">
                 <fieldset>
                     <legend><b>Harrison Login</b></legend>
                     User Name:<br>
@@ -149,7 +148,7 @@
                     </p>
                     <input type="submit" value="Create Account">
                 </fieldset>
-            </from>
+            </form>
         </div>
     </main>
 
