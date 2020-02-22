@@ -16,6 +16,7 @@
         function validate() {
             var x = document.getElementByName("housing[]");
             for (i = 0; i < x.length; i++) {
+                alert(i);
                 if (x[i].checked) {
                     alert("Something was Checked");
                     return;
@@ -64,7 +65,7 @@
 
     <main>
         <br>
-        <form action="../views/sign_in.php" onsubmit="return validate()" method="post">
+        <form action="../views/signup.php" onsubmit="return validate()" method="post">
             <fieldset>
                 <legend>Personal Information:</legend>
                 First Name:<br>
