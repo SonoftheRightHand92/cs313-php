@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    $_SESSION["firstname"] = $_POST["firstname"];
+    $_SESSION["lastname"] = $_POST["lastname"];
+    $_SESSION["email"] = $_POST["email"];
+    $_SESSION["homeaddress"] = $_POST["homeaddress"];
+    $_SESSION["city"] = $_POST["city"];
+    $_SESSION["state"] = $_POST["state"];
+    $_SESSION["zip"] = $_POST["zip"];
+    $_SESSION["areacode"] = $_POST["areacode"];
+    $_SESSION["next3"] = $_POST["next3"];
+    $_SESSION["last4"] = $_POST["last4"];
+    $_SESSION["cellareacode"] = $_POST["cellareacode"];
+    $_SESSION["cellnext3"] = $_POST["cellnext3"];
+    $_SESSION["celllast4"] = $_POST["celllast4"];
+    $_SESSION["month"] = $_POST["month"];
+    $_SESSION["day"] = $_POST["day"];
+    $_SESSION["year"] = $_POST["year"];
+    $_SESSION["housing[]"] = $_POST["[]"];
+
+    echo $_SESSION["housing[]"][1];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
