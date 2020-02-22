@@ -23,6 +23,9 @@
     if (isset($_POST["housing[]"])) {
         echo "Housing is set!<br>";
     }
+    else {
+        echo "Housing is NOT set!<br>";
+    }
     echo "<h1>STUFF$house[0]</h1>";
 ?>
 <!DOCTYPE html>
