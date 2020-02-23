@@ -12,7 +12,7 @@
 <?php
 
 session_start();
-if (isset($_SESSION["frstname"])) {
+if (isset($_SESSION["firstname"])) {
 	echo "<h1>IT IS SET</h1>";
 }
 else {
