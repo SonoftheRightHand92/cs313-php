@@ -35,7 +35,7 @@
                 <li><a href="../views/prices.html">Prices</a></li>
                 <li><a href="../views/signup.php">Sign Up</a></li>
                 <li><a href="../views/contact.html">Contact Us</a></li>
-                <li><a href="../views/sign_in.html">Sign In</a></li>
+                <li><a href="../views/sign_in.php">Sign In</a></li>
             </ul>
         </div><br>
 
@@ -46,7 +46,7 @@
                 <li><a href="../views/prices.html">Prices</a></li>
                 <li><a href="../views/signup.php">Sign Up</a></li>
                 <li><a href="../views/contact.html">Contact Us</a></li>
-                <li><a href="../views/sign_in.html">Sign In</a></li>
+                <li><a href="../views/sign_in.php">Sign In</a></li>
             </ul>
 
         </nav>
