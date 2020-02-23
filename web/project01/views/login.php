@@ -57,7 +57,7 @@
         <?php
         echo "WE GOT HERE";
         $email = $_SESSION["email"];
-        
+
         if ($email == "admin@admin.com") {
             echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
@@ -88,6 +88,7 @@
             }
         }
         else {
+            echo "WE ARE IN THE ELSE";
             $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
             $profiles->execute();
     
