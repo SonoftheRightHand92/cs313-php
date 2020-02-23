@@ -55,7 +55,7 @@
         <h1>Welcome</h1>
         <?php
         $email = $_GET["email"];
-        if (strcmp($email, "admin@admin.com")) {
+        if ($email === "admin@admin.com") {
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();
     
