@@ -96,6 +96,7 @@
                 echo "WE ARE IN THE ELSE WHILE LOOP<br>";
                 $firstName = $rRow["first_name"];
                 $lastName = $rRow["last_name"];
+                $email = $rRow["email"];
                 $street = $rRow["street_address"];
                 $city = $rRow["city"];
                 $state = $rRow["state_name"];
@@ -111,7 +112,7 @@
                 $year = $rRow["b_year"];
                 $housing = $rRow["housing_contract"];
             
-                echo "$firstName $lastName<br>$newEmail<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
+                echo "$firstName $lastName<br>$email<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
                 Cell Phone: $cellAreaCode-$cellNext3-$cellLast4<br>Birthday: $month/$day/$year<br>Is signed up for housing in $housing";
             }
         }
