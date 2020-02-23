@@ -1,18 +1,6 @@
 <?php
-	session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+session_start();
 
-<?php
 $firstName = $_SESSION["firstname"];
 $lastName = $_SESSION["lastname"];
 $email = $_SESSION["email"];
@@ -86,5 +74,3 @@ header("Location: sign_in.php");
 
 die(); 
 ?>
-
-</html>
