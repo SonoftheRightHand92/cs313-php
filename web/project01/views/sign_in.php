@@ -5,22 +5,17 @@
     if (isset($_POST["username"]) && isset($_POST["password"])) {
         $userName = $_POST["username"];
         $password = $_POST["password"];
-        echo "$userName<br>";
-        echo "$password<br>";
 
         $profiles = $db->prepare("SELECT * FROM profiles WHERE custom_name = '$userName'");
         $profiles->execute();
-        echo "code got here <br>";
 
         while ($pRow = $profiles->fetch(PDO::FETCH_ASSOC))
         {
             $custom_name = $pRow["custom_name"];
             $code = $pRow["code"];
             $email = $pRow["email"];
-            echo "$custom_name $code $email";
 
             if ($custom_name == $userName && $code == $password) {
-                echo "Go to new place";
                 header("Location: login.php");
             }
         }
