@@ -84,7 +84,7 @@
                             $email = $pRow["email"];
                 
                             if ($custom_name == $userName && $code == $password) {
-                                header("Location: login.php/?custom_name=$custom_name");
+                                header("Location: login.php/?email=$email");
                             }
                         }
                         echo "<p id='error'>Invalid Username or Password</p>";

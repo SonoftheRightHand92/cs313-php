@@ -52,10 +52,10 @@
     </header>
 
     <main>
-        <h1>Welcome <?php echo $_GET['custom_name']?></h1>
+        <h1>Welcome</h1>
         <?php
-        $custom_name = $_GET["custom_name"];
-        if (strcmp($custom_name, "admin")) {
+        $email = $_GET["email"];
+        if (strcmp($email, "admin@admin.com")) {
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();
     
@@ -85,7 +85,7 @@
         }
         else {
             echo "WE ARE IN THE ELSE<br>";
-            $renters = $db->prepare("SELECT * FROM renters WHERE custom_name = '$custom_name'");
+            $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
             $renters->execute();
             
             echo "RIGHT BEFORE THE WHILE LOOP<br>";
