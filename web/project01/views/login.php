@@ -57,6 +57,7 @@
     <main>
         <h1>Welcome</h1>
         <?php
+        echo "WE GOT HERE";
         if ($email == "admin@admin.com") {
             echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
