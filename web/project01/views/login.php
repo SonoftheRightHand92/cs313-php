@@ -23,29 +23,29 @@
 
     <header>
         <div class="mobile-header">
-            <a href="../../index.html"><img id="logo" src="../../images/logo.png" alt="Harrison Logo"></a>
+            <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Harrison Logo"></a>
             <h1>Harrison Apartments</h1>
 
             <input type="checkbox" id="menu" />
             <label for="menu">&#9776;</label>
             <ul class="sub-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../views/apartments.html">Apartments</a></li>
-                <li><a href="../../views/prices.html">Prices</a></li>
-                <li><a href="../../../views/signup.php">Sign Up</a></li>
-                <li><a href="../../views/contact.html">Contact Us</a></li>
-                <li><a href="../../views/sign_in.php">Sign In</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../views/apartments.html">Apartments</a></li>
+                <li><a href="../views/prices.html">Prices</a></li>
+                <li><a href="../views/signup.php">Sign Up</a></li>
+                <li><a href="../views/contact.html">Contact Us</a></li>
+                <li><a href="../views/sign_in.php">Sign In</a></li>
             </ul>
         </div><br>
 
         <nav class="topnav">
             <ul id="myLinks">
-                <li class="active"><a href="../../index.html">Home</a></li>
-                <li><a href="../../views/apartments.html">Apartments</a></li>
-                <li><a href="../../views/prices.html">Prices</a></li>
-                <li><a href="../../views/signup.php">Sign Up</a></li>
-                <li><a href="../../views/contact.html">Contact Us</a></li>
-                <li><a href="../../views/sign_in.php">Sign In</a></li>
+                <li class="active"><a href="../index.html">Home</a></li>
+                <li><a href="../views/apartments.html">Apartments</a></li>
+                <li><a href="../views/prices.html">Prices</a></li>
+                <li><a href="../views/signup.php">Sign Up</a></li>
+                <li><a href="../views/contact.html">Contact Us</a></li>
+                <li><a href="../views/sign_in.php">Sign In</a></li>
             </ul>
 
         </nav>
