@@ -23,9 +23,9 @@ $last4 = $_SESSION["last4"];
 $cellAreaCode = $_SESSION["cellareacode"];
 $cellNext3 = $_SESSION["cellnext3"];
 $cellLast4 = $_SESSION["celllast4"];
-$month = $_SESSION["month"];
-$day = $_SESSION["day"];
-$year = $_SESSION["year"];
+$b_month = $_SESSION["month"];
+$b_day = $_SESSION["day"];
+$b_year = $_SESSION["year"];
 $housing = $_SESSION["housing"];
 $userName = $_POST['username'];
 $password = $_POST['password'];
@@ -43,7 +43,7 @@ $db = get_db();
 
 try
 {
-	$query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :month, :day, :year, :string)";
+	$query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :b_month, :b_day, :b_year, :string)";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':firstName', $firstName);
 	$statement->bindValue(':lastName', $lastName);
@@ -58,24 +58,24 @@ try
 	$statement->bindValue(':cellAreaCode', $cellAreaCode);
 	$statement->bindValue(':cellNext3', $cellNext3);
 	$statement->bindValue(':cellLast4', $cellLast4);
-	$statement->bindValue(':month', $month);
-	$statement->bindValue(':day', $day);
-	$statement->bindValue(':year', $year);
+	$statement->bindValue(':b_month', $b_month);
+	$statement->bindValue(':b_day', $b_day);
+	$statement->bindValue(':b_year', $b_year);
 	$statement->bindValue(':string', $string);
 	$statement->execute();
 	
 	$db->lastInsertId("renters_id_seq");
 
-	// $query2 = "INSERT INTO profiles (custom_name, code, email)
-	// VALUES (:userName, :password, :email)";
+	$query2 = "INSERT INTO profiles (custom_name, code, email)
+	VALUES (:userName, :password, :email)";
 
-	// $statement2 = $db->prepare($query2);
-	// $statement2->bindValue(':userName', $userName);
-	// $statement2->bindValue(':password',$password);
-	// $statement2->bindValue('email', $email);
-	// $statement2->execute();
+	$statement2 = $db->prepare($query2);
+	$statement2->bindValue(':userName', $userName);
+	$statement2->bindValue(':password',$password);
+	$statement2->bindValue('email', $email);
+	$statement2->execute();
 
-	// $db->lastInsertId("profiles_id_seq");
+	$db->lastInsertId("profiles_id_seq");
 }
 catch (Exception $ex)
 {
