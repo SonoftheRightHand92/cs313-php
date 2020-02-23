@@ -1,5 +1,4 @@
 <?php
-    session_start();
 	require("dbConnect.php");
     $db = get_db();
 ?>
@@ -54,68 +53,67 @@
     </header>
 
     <main>
-        <h1>Welcome <?php echo $_GET["custom_name"];?></h1>
+        <h1>Welcome</h1>
         <?php
-        $custom_name = $_GET["custom_name"];
-        if (strcmp($custom_name, "admin")) {
-            $renters = $db->prepare("SELECT * FROM renters");
-            $renters->execute();
+        // if (strcmp($custom_name, "admin")) {
+        //     $renters = $db->prepare("SELECT * FROM renters");
+        //     $renters->execute();
     
-            while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
-            {
-                $firstName = $rRow["first_name"];
-                $lastName = $rRow["last_name"];
-                $newEmail = $rRow["email"];
-                $street = $rRow["street_address"];
-                $city = $rRow["city"];
-                $state = $rRow["state_name"];
-                $zip = $rRow["zip"];
-                $areaCode = $rRow["area_code_home"];
-                $next3 = $rRow["first_three_home"];
-                $last4 = $rRow["last_four_home"];
-                $cellAreaCode = $rRow["area_code_cell"];
-                $cellNext3 = $rRow["first_three_cell"];
-                $cellLast4 = $rRow["last_four_cell"];
-                $month = $rRow["b_month"];
-                $day = $rRow["b_day"];
-                $year = $rRow["b_year"];
-                $housing = $rRow["housing_contract"];
+        //     while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
+        //     {
+        //         $firstName = $rRow["first_name"];
+        //         $lastName = $rRow["last_name"];
+        //         $newEmail = $rRow["email"];
+        //         $street = $rRow["street_address"];
+        //         $city = $rRow["city"];
+        //         $state = $rRow["state_name"];
+        //         $zip = $rRow["zip"];
+        //         $areaCode = $rRow["area_code_home"];
+        //         $next3 = $rRow["first_three_home"];
+        //         $last4 = $rRow["last_four_home"];
+        //         $cellAreaCode = $rRow["area_code_cell"];
+        //         $cellNext3 = $rRow["first_three_cell"];
+        //         $cellLast4 = $rRow["last_four_cell"];
+        //         $month = $rRow["b_month"];
+        //         $day = $rRow["b_day"];
+        //         $year = $rRow["b_year"];
+        //         $housing = $rRow["housing_contract"];
 
-                echo "$firstName $lastName<br>$newEmail<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
-                Cell Phone: $cellAreaCode-$cellNext3-$cellLast4<br>Birthday: $month/$day/$year<br>Is signed up for housing in $housing<br><br>";
-            }
-        }
-        else {
-            echo "WE ARE IN THE ELSE<br>";
-            $renters = $db->prepare("SELECT * FROM renters WHERE custom_name = '$custom_name'");
-            $renters->execute();
+        //         echo "$firstName $lastName<br>$newEmail<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
+        //         Cell Phone: $cellAreaCode-$cellNext3-$cellLast4<br>Birthday: $month/$day/$year<br>Is signed up for housing in $housing<br><br>";
+        //     }
+        // }
+        // else {
+        //     echo "WE ARE IN THE ELSE<br>";
+        //     $renters = $db->prepare("SELECT * FROM renters WHERE custom_name = '$custom_name'");
+        //     $renters->execute();
             
-            echo "RIGHT BEFORE THE WHILE LOOP<br>";
-            while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
-            {
-                echo "WE ARE IN THE ELSE WHILE LOOP<br>";
-                $firstName = $rRow["first_name"];
-                $lastName = $rRow["last_name"];
-                $email = $rRow["email"];
-                $street = $rRow["street_address"];
-                $city = $rRow["city"];
-                $state = $rRow["state_name"];
-                $zip = $rRow["zip"];
-                $areaCode = $rRow["area_code_home"];
-                $next3 = $rRow["first_three_home"];
-                $last4 = $rRow["last_four_home"];
-                $cellAreaCode = $rRow["area_code_cell"];
-                $cellNext3 = $rRow["first_three_cell"];
-                $cellLast4 = $rRow["last_four_cell"];
-                $month = $rRow["b_month"];
-                $day = $rRow["b_day"];
-                $year = $rRow["b_year"];
-                $housing = $rRow["housing_contract"];
+        //     echo "RIGHT BEFORE THE WHILE LOOP<br>";
+        //     while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
+        //     {
+        //         echo "WE ARE IN THE ELSE WHILE LOOP<br>";
+        //         $firstName = $rRow["first_name"];
+        //         $lastName = $rRow["last_name"];
+        //         $email = $rRow["email"];
+        //         $street = $rRow["street_address"];
+        //         $city = $rRow["city"];
+        //         $state = $rRow["state_name"];
+        //         $zip = $rRow["zip"];
+        //         $areaCode = $rRow["area_code_home"];
+        //         $next3 = $rRow["first_three_home"];
+        //         $last4 = $rRow["last_four_home"];
+        //         $cellAreaCode = $rRow["area_code_cell"];
+        //         $cellNext3 = $rRow["first_three_cell"];
+        //         $cellLast4 = $rRow["last_four_cell"];
+        //         $month = $rRow["b_month"];
+        //         $day = $rRow["b_day"];
+        //         $year = $rRow["b_year"];
+        //         $housing = $rRow["housing_contract"];
             
-                echo "$firstName $lastName<br>$email<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
-                Cell Phone: $cellAreaCode-$cellNext3-$cellLast4<br>Birthday: $month/$day/$year<br>Is signed up for housing in $housing";
-            }
-        }
+        //         echo "$firstName $lastName<br>$ewmail<br>$street $city, $state $zip<br>Home Phone: $areaCode-$next3-$last4<br>
+        //         Cell Phone: $cellAreaCode-$cellNext3-$cellLast4<br>Birthday: $month/$day/$year<br>Is signed up for housing in $housing";
+        //     }
+        // }
         ?>
     </main>
     <br>
