@@ -51,18 +51,14 @@ try
 	// $statement->bindValue(':b_year', $b_year);
 	// $statement->bindValue(':string', $string);
 	// $statement->execute();
-	
-	// $db->lastInsertId("renters_id_seq");
 
-	// $query2 = "INSERT INTO profiles (custom_name, code, email) VALUES (:userName, :password, :email)";
+	$query2 = 'INSERT INTO profiles (custom_name, code, email) VALUES (:userName, :password, :email)';
 
-	$statement2 = $db->prepare("INSERT INTO profiles (custom_name, code, email) VALUES (:userName, :password, :email)");
+	$statement2 = $db->prepare($query2);
 	$statement2->bindValue(':userName', $userName);
 	$statement2->bindValue(':password', $password);
 	$statement2->bindValue(':email', $email);
 	$statement2->execute();
-
-	// $db->lastInsertId("profiles_id_seq");
 }
 catch (Exception $ex)
 {
