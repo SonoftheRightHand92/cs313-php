@@ -94,7 +94,7 @@
     
             while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
             {
-                echo "WE ARE IN THE ELSE WHILE LOOP<br>"
+                echo "WE ARE IN THE ELSE WHILE LOOP<br>";
                 $firstName = $rRow["first_name"];
                 $lastName = $rRow["last_name"];
                 $street = $rRow["street_address"];
