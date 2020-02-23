@@ -64,7 +64,7 @@ try
 	$statement->bindValue(':string', $string);
 	$statement->execute();
 	
-	$db->lastInsertId("renters_id_seq");
+	$uhIDONTKNOW = $db->lastInsertId("renters_id_seq");
 
 	$query2 = "INSERT INTO profiles (custom_name, code, email)
 	VALUES (:userName, :password, :email)";
