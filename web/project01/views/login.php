@@ -61,7 +61,7 @@
         if ($email == "admin@admin.com") {
             echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
-            $profiles->execute();
+            $renters->execute();
     
             while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
             {
@@ -90,7 +90,7 @@
         else {
             echo "WE ARE IN THE ELSE<br>";
             $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
-            $profiles->execute();
+            $renters->execute();
     
             while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
             {
