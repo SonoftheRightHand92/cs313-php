@@ -11,9 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
 
-    <link href="../styles/mobile.css" rel="stylesheet"> <!-- default styles - small/phone views -->
-    <link href="../styles/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
-    <link href="../styles/large.css" rel="stylesheet"> <!-- large/wide/desktop views -->
+    <link href="../../styles/mobile.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+    <link href="../../styles/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+    <link href="../../styles/large.css" rel="stylesheet"> <!-- large/wide/desktop views -->
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
     <header>
         <div class="mobile-header">
-            <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Harrison Logo"></a>
+            <a href="../../index.html"><img id="logo" src="../../images/logo.png" alt="Harrison Logo"></a>
             <h1>Harrison Apartments</h1>
 
             <input type="checkbox" id="menu" />
