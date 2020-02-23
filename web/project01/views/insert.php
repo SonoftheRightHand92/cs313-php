@@ -56,7 +56,7 @@ try
 
 	$query2 = "INSERT INTO profiles (custom_name, code, email) VALUES (:userName, :password, :email)";
 
-	$statement2 = $db->prepare($query2);
+	// $statement2 = $db->prepare($query2);
 	// $statement2->bindValue(':userName', $userName);
 	// $statement2->bindValue(':password', $password);
 	// $statement2->bindValue(':email', $email);
