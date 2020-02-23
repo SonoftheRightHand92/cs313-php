@@ -58,7 +58,7 @@
         echo "WE GOT HERE<br>";
         $email = $_SESSION["email"];
 
-        if ($email == "admin@admin.com") {
+        if (strcmp($email, "admin@admin.com")) {
             echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();
