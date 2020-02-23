@@ -23,6 +23,8 @@ $housing = $_SESSION["housing"];
 $userName = $_POST['username'];
 $password = $_POST['password'];
 
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
 $string = '';
 for ($i = 0; $i < sizeof($housing); $i++) {
 	$string .= $housing[$i];
@@ -58,7 +60,7 @@ try
 
 	$statement2 = $db->prepare($query2);
 	$statement2->bindValue(':userName', $userName);
-	$statement2->bindValue(':password', $password);
+	$statement2->bindValue(':password', $passwordHash);
 	$statement2->bindValue(':email', $email);
 	$statement2->execute();
 }
