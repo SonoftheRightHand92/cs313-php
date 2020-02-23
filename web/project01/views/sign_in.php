@@ -2,24 +2,6 @@
 	require("dbConnect.php");
     $db = get_db();
     
-    if (isset($_POST["username"]) && isset($_POST["password"])) {
-        $userName = $_POST["username"];
-        $password = $_POST["password"];
-
-        $profiles = $db->prepare("SELECT * FROM profiles WHERE custom_name = '$userName'");
-        $profiles->execute();
-
-        while ($pRow = $profiles->fetch(PDO::FETCH_ASSOC))
-        {
-            $custom_name = $pRow["custom_name"];
-            $code = $pRow["code"];
-            $email = $pRow["email"];
-
-            if ($custom_name == $userName && $code == $password) {
-                header("Location: login.php");
-            }
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +16,12 @@
     <link href="../styles/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
     <link href="../styles/large.css" rel="stylesheet"> <!-- large/wide/desktop views -->
     <link href="../styles/signin.css" rel="stylesheet">
+
+    <style>
+        #error {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,6 +69,29 @@
                     <input type="text" name="username" required><br>
                     Password:<br>
                     <input type="text" name="password" required><br><br>
+                    <?php
+                    if (isset($_POST["username"]) && isset($_POST["password"])) {
+                        $userName = $_POST["username"];
+                        $password = $_POST["password"];
+                
+                        $profiles = $db->prepare("SELECT * FROM profiles WHERE custom_name = '$userName'");
+                        $profiles->execute();
+                
+                        while ($pRow = $profiles->fetch(PDO::FETCH_ASSOC))
+                        {
+                            $custom_name = $pRow["custom_name"];
+                            $code = $pRow["code"];
+                            $email = $pRow["email"];
+                
+                            if ($custom_name == $userName && $code == $password) {
+                                header("Location: login.php");
+                            }
+                            else {
+                                echo "<p id='error'>Invalid Username or Password</p>"
+                            }
+                        }
+                    }
+                    ?>
                     <input type="submit" value="Login">
                 </fieldset>
             </form>
