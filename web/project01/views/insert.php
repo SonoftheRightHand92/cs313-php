@@ -72,7 +72,7 @@ try
 	$statement2 = $db->prepare($query2);
 	$statement2->bindValue(':userName', $userName);
 	$statement2->bindValue(':password',$password);
-	$statement2->bindValue('email', $email);
+	$statement2->bindValue(':email', $email);
 	$statement2->execute();
 
 	$db->lastInsertId("profiles_id_seq");
