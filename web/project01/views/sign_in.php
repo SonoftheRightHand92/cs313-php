@@ -85,7 +85,7 @@
                             $email = $pRow["email"];
                 
                             if ($custom_name == $userName && $code == $password) {
-                                $_SESSION["email"] = $email;
+                                $_SESSION["custom_name"] = $custom_name;
                                 header("Location: login.php");
                             }
                         }

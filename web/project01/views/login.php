@@ -1,6 +1,8 @@
 <?php
 	require("dbConnect.php");
     $db = get_db();
+
+    $custom_name = $_SESSION["custom_name"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,11 +55,9 @@
     </header>
 
     <main>
-        <h1>Welcome</h1>
+        <h1>Welcome <?php echo "$custom_name"?></h1>
         <?php
-        $email = $_SESSION["email"];
-
-        if (strcmp($email, "admin@admin.com")) {
+        if (strcmp($custom_name, "admin")) {
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();
     
@@ -87,7 +87,7 @@
         }
         else {
             echo "WE ARE IN THE ELSE<br>";
-            $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
+            $renters = $db->prepare("SELECT * FROM renters WHERE custom_name = '$custom_name'");
             $renters->execute();
             
             echo "RIGHT BEFORE THE WHILE LOOP<br>";
