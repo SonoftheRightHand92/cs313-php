@@ -1,8 +1,6 @@
 <?php
 	require("dbConnect.php");
     $db = get_db();
-
-    $email = $_SESSION["email"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +56,8 @@
         <h1>Welcome</h1>
         <?php
         echo "WE GOT HERE";
+        $email = $_SESSION["email"];
+        
         if ($email == "admin@admin.com") {
             echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
