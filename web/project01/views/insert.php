@@ -12,6 +12,12 @@
 <?php
 
 session_start();
+if (isset($_SESSION["frstname"])) {
+	echo "<h1>IT IS SET</h1>";
+}
+else {
+	echo "<h1>It is NOT set</h1>";
+}
 $firstName = $_SESSION["firstname"];
 $lastName = $_SESSION["lastname"];
 $email = $_SESSION["email"];
