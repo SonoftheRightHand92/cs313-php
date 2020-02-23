@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	require("dbConnect.php");
     $db = get_db();
     
@@ -84,6 +85,7 @@
                             $email = $pRow["email"];
                 
                             if ($custom_name == $userName && $code == $password) {
+                                $_SESSION["email"] = $email;
                                 header("Location: login.php");
                             }
                         }
