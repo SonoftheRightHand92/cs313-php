@@ -62,7 +62,7 @@ try
 	// $statement2->bindValue(':email', $email);
 	// $statement2->execute();
 
-	$db->lastInsertId("profiles_id_seq");
+	// $db->lastInsertId("profiles_id_seq");
 }
 catch (Exception $ex)
 {
