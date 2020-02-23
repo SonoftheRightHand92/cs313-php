@@ -55,11 +55,9 @@
     <main>
         <h1>Welcome</h1>
         <?php
-        echo "WE GOT HERE<br>";
         $email = $_SESSION["email"];
 
         if (strcmp($email, "admin@admin.com")) {
-            echo "THIS IS AN ADMIN";
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();
     
