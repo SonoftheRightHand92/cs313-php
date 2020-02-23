@@ -87,7 +87,7 @@
                                 header("Location: login.php");
                             }
                             else {
-                                echo "<p id='error'>Invalid Username or Password</p>"
+                                echo "<p id='error'>Invalid Username or Password</p>";
                             }
                         }
                     }
