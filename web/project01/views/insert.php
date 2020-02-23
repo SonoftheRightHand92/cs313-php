@@ -39,31 +39,49 @@ $userName = $_POST['username'];
 $password = $_POST['password'];
 
 $string = '';
-// for ($i = 0; i < sizeof($housing); $i++) {
-// 	$string += $housing[$i];
-// 	if ($i < (sizeof($housing) - 1) && $housing[$i] != '') {
-// 		$string += ", ";
-// 	}
-// }
+for ($i = 0; i < sizeof($housing); $i++) {
+	$string += $housing[$i];
+	if ($i < (sizeof($housing) - 1) && $housing[$i] != '') {
+		$string += ", ";
+	}
+}
 
 echo $firstName;
+echo "<br>";
 echo $lastName;
+echo "<br>";
 echo $email;
+echo "<br>";
 echo $street;
+echo "<br>";
 echo $city;
+echo "<br>";
 echo $state;
+echo "<br>";
 echo $zip;
+echo "<br>";
 echo $areaCode;
+echo "<br>";
 echo $next3;
+echo "<br>";
 echo $last4;
+echo "<br>";
 echo $cellAreaCode;
+echo "<br>";
 echo $cellNext3;
+echo "<br>";
 echo $cellLast4;
+echo "<br>";
 echo $month;
+echo "<br>";
 echo $day;
+echo "<br>";
 echo $year;
+echo "<br>";
 echo $userName;
+echo "<br>";
 echo $password;
+echo "<br>";
 echo $string;
 
 require("dbConnect.php");
