@@ -43,6 +43,7 @@ $db = get_db();
 
 try
 {
+	echo $email;
 	// $query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :b_month, :b_day, :b_year, :string)";
 	// $statement = $db->prepare($query);
 	// $statement->bindValue(':firstName', $firstName);
@@ -66,25 +67,25 @@ try
 	
 	// $db->lastInsertId("renters_id_seq");
 
-	$query2 = "INSERT INTO profiles (custom_name, code, email)
-	VALUES (:userName, :password, :email)";
+	// $query2 = "INSERT INTO profiles (custom_name, code, email)
+	// VALUES (:userName, :password, :email)";
 
-	$statement2 = $db->prepare($query2);
-	$statement2->bindValue(':userName', $userName);
-	$statement2->bindValue(':password',$password);
-	$statement2->bindValue(':email', $email);
-	$statement2->execute();
+	// $statement2 = $db->prepare($query2);
+	// $statement2->bindValue(':userName', $userName);
+	// $statement2->bindValue(':password', $password);
+	// $statement2->bindValue(':email', $email);
+	// $statement2->execute();
 
-	$db->lastInsertId("profiles_id_seq");
+	// $db->lastInsertId("profiles_id_seq");
 }
 catch (Exception $ex)
 {
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: sign_in.php");
+// header("Location: sign_in.php");
 
-die(); 
+// die(); 
 ?>
 
 </html>
