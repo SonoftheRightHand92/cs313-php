@@ -39,7 +39,7 @@ $userName = $_POST['username'];
 $password = $_POST['password'];
 
 $string = '';
-for ($i = 0; i < sizeof($housing); $i++) {
+for ($i = 0; $i < sizeof($housing); $i++) {
 	$string .= $housing[$i];
 	if ($i < (sizeof($housing) - 1) && !empty($housing[$i])) {
 		$string .= ", ";
