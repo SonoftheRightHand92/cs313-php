@@ -55,7 +55,7 @@
     <main>
         <h1>Welcome</h1>
         <?php
-        echo "WE GOT HERE";
+        echo "WE GOT HERE<br>";
         $email = $_SESSION["email"];
 
         if ($email == "admin@admin.com") {
@@ -88,12 +88,13 @@
             }
         }
         else {
-            echo "WE ARE IN THE ELSE";
+            echo "WE ARE IN THE ELSE<br>";
             $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
             $profiles->execute();
     
             while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
             {
+                echo "WE ARE IN THE ELSE WHILE LOOP<br>"
                 $firstName = $rRow["first_name"];
                 $lastName = $rRow["last_name"];
                 $street = $rRow["street_address"];
