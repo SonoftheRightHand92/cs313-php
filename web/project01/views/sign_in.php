@@ -3,23 +3,23 @@
     $db = get_db();
     
     if (isset($_POST["userName"]) && isset($password = $_POST["password"])) {
-        $userName = $_POST["userName"];
-        $password = $_POST["password"];
+        // $userName = $_POST["userName"];
+        // $password = $_POST["password"];
 
-        $profiles = $db->prepare("SELECT * FROM profiles WHERE custom_name = '$userName'");
-        $profiles->execute();
+        // $profiles = $db->prepare("SELECT * FROM profiles WHERE custom_name = '$userName'");
+        // $profiles->execute();
 
 
-        while ($pRow = $profiles->fetch(PDO::FETCH_ASSOC))
-        {
-            $custom_name = $pRow["custom_name"];
-            $code = $pRow["code"];
-            $email = $pRow["email"];
+        // while ($pRow = $profiles->fetch(PDO::FETCH_ASSOC))
+        // {
+        //     $custom_name = $pRow["custom_name"];
+        //     $code = $pRow["code"];
+        //     $email = $pRow["email"];
 
-            if ($custom_name == $userName && $code == $password) {
-                header("Location: login.php");
-            }
-        }
+        //     if ($custom_name == $userName && $code == $password) {
+        //         header("Location: login.php");
+        //     }
+        // }
     }
 ?>
 <!DOCTYPE html>
