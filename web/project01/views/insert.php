@@ -11,28 +11,28 @@
 
 <?php
 
-// session_start();
-// $firstName = $_SESSION["firstname"];
-// $lastName = $_SESSION["lastname"];
-// $email = $_SESSION["email"];
-// $street = $_SESSION["homeaddress"];
-// $city = $_SESSION["city"];
-// $state = $_SESSION["state"];
-// $zip = $_SESSION["zip"];
-// $areaCode = $_SESSION["areacode"];
-// $next3 = $_SESSION["next3"];
-// $last4 = $_SESSION["last4"];
-// $cellAreaCode = $_SESSION["cellareacode"];
-// $cellNext3 = $_SESSION["cellnext3"];
-// $cellLast4 = $_SESSION["celllast4"];
-// $month = $_SESSION["month"];
-// $day = $_SESSION["day"];
-// $year = $_SESSION["year"];
-// $housing = $_SESSION["housing"];
-// $userName = $_POST['username'];
-// $password = $_POST['password'];
+session_start();
+$firstName = $_SESSION["firstname"];
+$lastName = $_SESSION["lastname"];
+$email = $_SESSION["email"];
+$street = $_SESSION["homeaddress"];
+$city = $_SESSION["city"];
+$state = $_SESSION["state"];
+$zip = $_SESSION["zip"];
+$areaCode = $_SESSION["areacode"];
+$next3 = $_SESSION["next3"];
+$last4 = $_SESSION["last4"];
+$cellAreaCode = $_SESSION["cellareacode"];
+$cellNext3 = $_SESSION["cellnext3"];
+$cellLast4 = $_SESSION["celllast4"];
+$month = $_SESSION["month"];
+$day = $_SESSION["day"];
+$year = $_SESSION["year"];
+$housing = $_SESSION["housing"];
+$userName = $_POST['username'];
+$password = $_POST['password'];
 
-// $string = '';
+$string = '';
 // for ($i = 0; i < sizeof($housing); $i++) {
 // 	$string += $housing[$i];
 // 	if ($i < (sizeof($housing) - 1) && $housing[$i] != '') {
@@ -40,28 +40,28 @@
 // 	}
 // }
 
-// echo $firstName;
-// echo $lastName;
-// echo $email;
-// echo $street;
-// echo $city;
-// echo $state;
-// echo $zip;
-// echo $areaCode;
-// echo $next3;
-// echo $last4;
-// echo $cellAreaCode;
-// echo $cellNext3;
-// echo $cellLast4;
-// echo $month;
-// echo $day;
-// echo $year;
-// echo $userName;
-// echo $password;
-// echo $string;
+echo $firstName;
+echo $lastName;
+echo $email;
+echo $street;
+echo $city;
+echo $state;
+echo $zip;
+echo $areaCode;
+echo $next3;
+echo $last4;
+echo $cellAreaCode;
+echo $cellNext3;
+echo $cellLast4;
+echo $month;
+echo $day;
+echo $year;
+echo $userName;
+echo $password;
+echo $string;
 
-// require("dbConnect.php");
-// $db = get_db();
+require("dbConnect.php");
+$db = get_db();
 
 // try
 // {
