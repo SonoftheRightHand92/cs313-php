@@ -54,7 +54,7 @@
     </header>
 
     <main>
-        <h1>Welcome1 <?php echo "$_SESSION['custom_name']";?></h1>
+        <h1>Welcome</h1>
         <?php
         $custom_name = $_SESSION["custom_name"];
         if (strcmp($custom_name, "admin")) {
