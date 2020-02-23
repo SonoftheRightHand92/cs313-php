@@ -91,7 +91,8 @@
             echo "WE ARE IN THE ELSE<br>";
             $renters = $db->prepare("SELECT * FROM renters WHERE email = '$email'");
             $renters->execute();
-    
+            
+            echo "RIGHT BEFORE THE WHILE LOOP<br>";
             while ($rRow = $renters->fetch(PDO::FETCH_ASSOC))
             {
                 echo "WE ARE IN THE ELSE WHILE LOOP<br>";
