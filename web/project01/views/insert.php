@@ -10,14 +10,6 @@
 </body>
 
 <?php
-
-session_start();
-if (isset($_SESSION["firstname"])) {
-	echo "<h1>IT IS SET</h1>";
-}
-else {
-	echo "<h1>It is NOT set</h1>";
-}
 $firstName = $_SESSION["firstname"];
 $lastName = $_SESSION["lastname"];
 $email = $_SESSION["email"];
@@ -46,92 +38,54 @@ for ($i = 0; $i < sizeof($housing); $i++) {
 	}
 }
 
-echo $firstName;
-echo "<br>";
-echo $lastName;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $street;
-echo "<br>";
-echo $city;
-echo "<br>";
-echo $state;
-echo "<br>";
-echo $zip;
-echo "<br>";
-echo $areaCode;
-echo "<br>";
-echo $next3;
-echo "<br>";
-echo $last4;
-echo "<br>";
-echo $cellAreaCode;
-echo "<br>";
-echo $cellNext3;
-echo "<br>";
-echo $cellLast4;
-echo "<br>";
-echo $month;
-echo "<br>";
-echo $day;
-echo "<br>";
-echo $year;
-echo "<br>";
-echo $userName;
-echo "<br>";
-echo $password;
-echo "<br>";
-echo $string;
-
 require("dbConnect.php");
 $db = get_db();
 
-// try
-// {
-// 	$query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) 
-// 	VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :month, :day, :year, :string)";
-// 	$statement = $db->prepare($query);
-// 	$statement->bindValue(':firstName', $firstName);
-// 	$statement->bindValue(':lastName', $lastName);
-// 	$statement->bindValue(':email', $email);
-// 	$statement->bindValue(':street', $street);
-// 	$statement->bindValue(':city', $city);
-// 	$statement->bindValue(':state', $state);
-// 	$statement->bindValue(':zip', $zip);
-// 	$statement->bindValue(':areaCode', $areaCode);
-// 	$statement->bindValue(':next3', $next3);
-// 	$statement->bindValue(':last4', $last4);
-// 	$statement->bindValue(':cellAreaCode', $cellAreaCode);
-// 	$statement->bindValue(':cellNext3', $cellNext3);
-// 	$statement->bindValue(':cellLast4', $cellLast4);
-// 	$statement->bindValue(':month', $month);
-// 	$statement->bindValue(':day', $day);
-// 	$statement->bindValue(':year', $year);
-// 	$statement->bindValue(':string', $string);
-// 	$statement->execute();
+try
+{
+	$query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) 
+	VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :month, :day, :year, :string)";
+	$statement = $db->prepare($query);
+	$statement->bindValue(':firstName', $firstName);
+	$statement->bindValue(':lastName', $lastName);
+	$statement->bindValue(':email', $email);
+	$statement->bindValue(':street', $street);
+	$statement->bindValue(':city', $city);
+	$statement->bindValue(':state', $state);
+	$statement->bindValue(':zip', $zip);
+	$statement->bindValue(':areaCode', $areaCode);
+	$statement->bindValue(':next3', $next3);
+	$statement->bindValue(':last4', $last4);
+	$statement->bindValue(':cellAreaCode', $cellAreaCode);
+	$statement->bindValue(':cellNext3', $cellNext3);
+	$statement->bindValue(':cellLast4', $cellLast4);
+	$statement->bindValue(':month', $month);
+	$statement->bindValue(':day', $day);
+	$statement->bindValue(':year', $year);
+	$statement->bindValue(':string', $string);
+	$statement->execute();
 	
-// 	$db->lastInsertId("renters_id_seq");
+	$db->lastInsertId("renters_id_seq");
 
-// 	$query2 = "INSERT INTO profiles (custom_name, code, email)
-// 	VALUES (:userName, :password, :email)";
+	$query2 = "INSERT INTO profiles (custom_name, code, email)
+	VALUES (:userName, :password, :email)";
 
-// 	$statement2 = $db->prepare($query2);
-// 	$statement2->bindValue(':userName', $userName);
-// 	$statement2->bindValue(':password',$password);
-// 	$statement2->bindValue('email', $email);
-// 	$statement2->execute();
+	$statement2 = $db->prepare($query2);
+	$statement2->bindValue(':userName', $userName);
+	$statement2->bindValue(':password',$password);
+	$statement2->bindValue('email', $email);
+	$statement2->execute();
 
-// 	$db->lastInsertId("profiles_id_seq");
-// }
-// catch (Exception $ex)
-// {
-// 	echo "Error with DB. Details: $ex";
-// 	die();
-// }
-// header("Location: sign_in.php");
+	$db->lastInsertId("profiles_id_seq");
+}
+catch (Exception $ex)
+{
+	echo "Error with DB. Details: $ex";
+	die();
+}
+header("Location: sign_in.php");
 
-// die(); 
+die(); 
 ?>
 
 </html>
