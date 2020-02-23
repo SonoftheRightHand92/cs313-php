@@ -2,8 +2,8 @@
 	require("dbConnect.php");
     $db = get_db();
     
-    if (isset($_POST["userName"]) && isset($_POST["password"])) {
-        $userName = $_POST["userName"];
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
+        $userName = $_POST["username"];
         $password = $_POST["password"];
         echo "$userName<br>";
         echo "$password<br>";
