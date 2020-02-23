@@ -54,9 +54,9 @@
     </header>
 
     <main>
-        <h1>Welcome</h1>
+        <h1>Welcome <?php echo $_GET["custom_name"];?></h1>
         <?php
-        $custom_name = $_SESSION["custom_name"];
+        $custom_name = $_GET["custom_name"];
         if (strcmp($custom_name, "admin")) {
             $renters = $db->prepare("SELECT * FROM renters");
             $renters->execute();

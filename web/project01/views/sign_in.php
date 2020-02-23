@@ -1,5 +1,4 @@
 <?php
-    session_start();
 	require("dbConnect.php");
     $db = get_db();
     
@@ -85,8 +84,7 @@
                             $email = $pRow["email"];
                 
                             if ($custom_name == $userName && $code == $password) {
-                                $_SESSION["custom_name"] = $custom_name;
-                                header("Location: login.php");
+                                header("Location: login.php/?custom_name=$custom_name");
                             }
                         }
                         echo "<p id='error'>Invalid Username or Password</p>";
