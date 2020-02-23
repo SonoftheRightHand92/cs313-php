@@ -38,13 +38,25 @@ for ($i = 0; $i < sizeof($housing); $i++) {
 	}
 }
 
+if (isset($_SESSION["email"])) {
+	echo $email;
+}
+else {
+	echo "no email";
+}
+
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
 	echo "<h1>HELLO $email</h1>";
-	echo $email;
+	if (isset($_SESSION["email"])) {
+		echo $email;
+	}
+	else {
+		echo "no email";
+	}
 	// $query = "INSERT INTO renters (first_name, last_name, email, street_address, city, state_name, zip, area_code_home, first_three_home, last_four_home, area_code_cell, first_three_cell, last_four_cell, b_month, b_day, b_year, housing_contract) VALUES (:firstName, :lastName, :email, :street, :city, :state, :zip, :areaCode, :next3, :last4, :cellAreaCode, :cellNext3, :cellLast4, :b_month, :b_day, :b_year, :string)";
 	// $statement = $db->prepare($query);
 	// $statement->bindValue(':firstName', $firstName);
